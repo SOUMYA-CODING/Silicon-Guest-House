@@ -1,0 +1,270 @@
+@media only screen and (max-width: 480px) {
+
+    /* Common */
+    #header-text {
+        font-size: 26px;
+        font-weight: bolder;
+        letter-spacing: 1.5px;
+    }
+
+    #header-title {
+        font-size: 18px;
+        color: royalblue;
+    }
+
+    #or {
+        display: none;
+    }
+
+    /* Home Page */
+    .home-page-body {
+        padding-top: 0;
+        padding: 5.5rem 2rem;
+    }
+
+    .home-page-body .banner {
+        height: auto;
+        padding: 3rem 2rem;
+    }
+
+    .home-page-body .banner h2 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+
+    .home-page-body .banner p {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .header-section .nav-item .sign-btn {
+        width: 40%;
+        text-align: center;
+    }
+
+    /* Booking Section */
+    #booking-section {
+        background-color: #E2E2E2;
+        width: 100%;
+        height: auto;
+        margin: 2rem 0;
+    }
+
+    #booking-section form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem 1rem;
+    }
+
+    #booking-section form .form-floating {
+        width: 100%;
+    }
+
+    #booking-section form button {
+        width: 100%;
+    }
+
+    /* About Page */
+    #about-page {
+        height: auto;
+        padding: 5.5rem 2rem;
+    }
+
+    #about-page img {
+        width: 300px;
+        margin-top: 2rem;
+    }
+
+    /* Room Page */
+    #room-page {
+        height: auto;
+        padding: 5.5rem 1rem;
+    }
+
+    .rooms-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .rooms-section .card {
+        margin: 10px;
+        height: 250px;
+    }
+
+    .rooms-section .card img {
+        height: 100%;
+    }
+
+    /* Service Page */
+    #service-page {
+        height: auto;
+        padding: 5.5rem 1rem;
+    }
+
+    #service-page .service-section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #service-page .row .col section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #service-page .service-img {
+        width: 340px;
+        border-radius: 0;
+    }
+
+    #service-page .card {
+        width: auto;
+        height: auto;
+    }
+
+    .footer-contact .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-contact .single-section {
+        margin-bottom: 5px;
+    }
+
+    .footer-content {
+        position: relative;
+        z-index: 2;
+        margin-bottom: 2rem;
+    }
+
+    .footer-content .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-logo img {
+        width: 150px;
+    }
+
+    .footer-social-icon {
+        margin-bottom: 2rem;
+    }
+
+    /* Login Page */
+    #login-page {
+        height: auto;
+    }
+
+    #login-page .row {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #login-page .row .login-banner {
+        display: none;
+    }
+
+    #login-page .row .form {
+        padding: 1rem;
+    }
+
+    .login-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .login-section form {
+        padding: 2rem;
+    }
+
+    .login-section p a {
+        text-decoration: none;
+        color: orange;
+    }
+
+    .login-icon img {
+        width: 24px;
+    }
+
+    .login-icon span {
+        width: auto;
+    }
+
+    /* Registration Page */
+    #registration-page {
+        height: auto;
+    }
+
+    #registration-page .row {
+        height: auto;
+    }
+
+    #registration-page .row .registration-banner {
+        display: none;
+    }
+
+    #registration-page .row .form {
+        padding: 1rem;
+    }
+
+    .registration-icon {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .registration-section form {
+        padding: 2rem;
+    }
+
+    .registration-section p a {
+        text-decoration: none;
+        color: orange;
+    }
+
+    .registration-icon img {
+        width: 24px;
+    }
+
+    .registration-icon span {
+        width: auto;
+    }
+
+    /* Booking Page */
+    #booking-page {
+        height: auto;
+    }
+
+    #booking-page img {
+        width: 100px;
+    }
+
+    .booking-details .details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-details .details .form-control,
+    .booking-details .details .form-check {
+        width: 100%;
+    }
+
+    #booking-btn {
+        width: auto;
+    }
+
+    #cancel-btn {
+        width: auto;
+    }
+
+
+
+    /* Confirm Booking */
+    #confirm-booking {
+        width: 100%;
+        height: 100vh;
+        background-color: royalblue;
+        display: none;
+    }
+}

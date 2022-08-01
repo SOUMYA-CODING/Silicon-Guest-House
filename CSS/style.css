@@ -1,0 +1,591 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Common */
+#header-text {
+    font-size: 35px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+
+#header-title {
+    font-size: 18px;
+    color: royalblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#or {
+    position: relative;
+    width: 100%;
+    height: 1.1rem;
+    line-height: 5px;
+    text-align: center;
+}
+
+#or::before,
+#or::after {
+    position: absolute;
+    width: 200px;
+    height: 1px;
+    top: 2px;
+    background-color: #aaa;
+    content: '';
+}
+
+#or::before {
+    left: 0;
+}
+
+#or::after {
+    right: 0;
+}
+
+/* Home Page */
+#home-page {
+    width: 100%;
+    height: auto;
+}
+
+.header-section .navbar {
+    background-color: #fff;
+}
+
+.header-section .navbar-brand img {
+    width: 100px;
+}
+
+.header-section .nav-item .nav-link {
+    color: #111;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: royalblue;
+}
+
+.header-section .nav-item .sign-btn {
+    color: royalblue;
+    border: 2px solid royalblue;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+.header-section .nav-item .sign-btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+.header-section .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.home-page-body {
+    padding-top: 6rem;
+}
+
+.home-page-body .banner {
+    height: 75vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://silicon.ac.in/wp-content/uploads/2021/07/1-1-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+
+    padding: 10rem 5rem;
+}
+
+.home-page-body .banner h2 {
+    font-size: 45px;
+    font-weight: 600;
+}
+
+.home-page-body .banner p {
+    width: 65%;
+}
+
+.home-page-body .banner .book-now-btn {
+    padding: 0.7rem 2rem;
+    color: #fff;
+    background: royalblue;
+    margin-top: 12px;
+}
+
+
+/* Booking Section */
+#booking-section {
+    background-color: #E2E2E2;
+    width: 100%;
+    height: auto;
+    margin: 3rem 0;
+}
+
+#booking-section form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+#booking-section form .form-floating {
+    margin: 5px;
+    width: 250px;
+}
+
+#booking-section form button {
+    background-color: royalblue;
+    padding: 1rem 2rem;
+    color: #fff;
+}
+
+#booking-section form button:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#booking-section .form-control:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#booking-section .form-control:focus {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+/* About Page */
+#about-page {
+    height: auto;
+    padding: 7rem 0;
+}
+
+#about-page .btn {
+    color: #fff;
+    background-color: royalblue;
+}
+
+/* Room Page */
+#room-page {
+    height: auto;
+    padding: 7rem 0;
+}
+
+.rooms-section {
+    display: flex;
+    flex-direction: row;
+}
+
+.rooms-section .card {
+    margin: 10px;
+}
+
+#room-page .card .btn {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    text-decoration: none;
+    color: #fff;
+    background-color: royalblue;
+    margin: 1rem;
+}
+
+#room-page .card .btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#room-page .card .description {
+    display: none;
+}
+
+#room-page .card:hover .description {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+}
+
+/* Service Page */
+#service-page {
+    height: auto;
+    padding: 7rem 0;
+}
+
+#service-page .service-section {
+    display: flex;
+    flex-direction: column;
+}
+
+#service-page .row .col section {
+    display: flex;
+    flex-direction: row;
+}
+
+#service-page .service-img {
+    width: 650px;
+    border-radius: 10px;
+}
+
+#service-page .card {
+    width: 250px;
+    height: 200px;
+    margin: 10px;
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+#service-page .card:hover {
+    box-shadow: 0px 2px 70px #111;
+    transform: translateY(-5px);
+}
+
+
+/* Footer */
+#footer {
+    position: relative;
+    background-color: #034694;
+}
+
+#footer ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-contact iframe {
+    width: 100%;
+}
+
+#footer .single-section i {
+    color: #fff;
+    font-size: 30px;
+    float: left;
+    margin-top: 8px;
+}
+
+.footer-contact-text {
+    padding-left: 1rem;
+    display: inline-block;
+    color: #fff;
+}
+
+.footer-contact-text h4 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    margin-bottom: 2px;
+}
+
+.footer-contact-text span {
+    color: #fff;
+    font-size: 16px;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 1rem;
+}
+
+.footer-logo img {
+    width: 150px;
+}
+
+.footer-text p {
+    margin: .7rem 0;
+    font-size: 14px;
+    color: #fff;
+    line-height: 26px;
+}
+
+.footer-social-icon span {
+    color: #fff;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 900;
+    margin-bottom: 1.2rem;
+}
+
+.footer-social-icon a {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+
+.footer-social-icon i {
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer-heading h3 {
+    position: relative;
+    color: #fff;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+.footer-heading h3::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    height: 2px;
+    width: 120px;
+    background: #fff;
+}
+
+.footer-heading ul li {
+    text-decoration: none;
+    display: flex;
+    float: left;
+    width: 50%;
+    margin-bottom: .7rem;
+}
+
+.footer-heading ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.footer-heading ul li a:hover {
+    color: #fff;
+}
+
+.subscribe-form {
+    position: relative;
+}
+
+#footer form .form-label {
+    color: #fff;
+}
+
+#footer form .form-control {
+    border-radius: 0;
+}
+
+#footer form .form-control:focus {
+    box-shadow: 0px 0px 8px 0px #fff;
+}
+
+#footer form .form-control:hover {
+    box-shadow: 0px 0px 8px 0px #fff;
+}
+
+/* Login Page */
+#login-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-page .row {
+    width: 100%;
+    margin: 1rem 0;
+    height: 650px;
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+#login-page .row .login-banner {
+    height: 650px;
+    background-image: url('../Assets/one.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#login-page .row .form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-section p a {
+    text-decoration: none;
+    color: orange;
+}
+
+.login-icon img {
+    width: 24px;
+}
+
+.login-icon span {
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 1rem;
+    justify-content: center;
+    margin: 2px;
+    font-size: 14px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.login-icon span:hover {
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+.form-check-label span {
+    color: orange;
+}
+
+.login-section .form-control:focus {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+.login-section .form-control:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+.btn-submit .btn {
+    width: 100%;
+    background-color: orangered;
+    color: #fff;
+}
+
+.btn-submit .btn:focus {
+    box-shadow: none;
+}
+
+.btn-submit .btn:hover {
+    box-shadow: 0px 0px 8px 0px orangered;
+    color: #fff;
+}
+
+/* Registration Page */
+#registration-page {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#registration-page .row {
+    width: 100%;
+    margin: 1rem 0;
+    height: 650px;
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+#registration-page .row .registration-banner {
+    height: 650px;
+    background-image: url('../Assets/three.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#registration-page .row .form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.registration-section p a {
+    text-decoration: none;
+    color: orange;
+}
+
+.registration-icon img {
+    width: 24px;
+}
+
+.registration-icon span {
+    border: 1px solid #111;
+    border-radius: 5px;
+    padding: 1rem;
+    justify-content: center;
+    margin: 2px;
+    font-size: 14px;
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.registration-icon span:hover {
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+.registration-section .form-control:focus {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+.registration-section .form-control:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+
+/* Error Message */
+.error_message {
+    font-size: 12px;
+    color: red;
+}
+
+
+
+/* Booking Page */
+
+#booking-page {
+    width: 100%;
+    height: 100vh;
+}
+
+#booking-page img {
+    width: 100px;
+}
+
+#booking-page h5 {
+    color: orange;
+}
+
+#booking-btn {
+    width: 150px;
+    background-color: royalblue;
+    color: #fff;
+    margin: 5px;
+}
+
+#booking-btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#cancel-btn {
+    width: 100px;
+    background-color: red;
+    color: #fff;
+    margin: 5px;
+}
+
+#cancel-btn:hover {
+    box-shadow: 0px 0px 8px 0px red;
+}
+
+.radio-div {
+    display: flex;
+    padding: 5px 0;
+    margin-bottom: 3px;
+}
+
+.radio-div .form-check {
+    margin-right: 10px;
+}
+
+/* Confirm Booking */
+#confirm-booking {
+    width: 100%;
+    height: 100vh;
+    background-color: royalblue;
+    display: none;
+}
