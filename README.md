@@ -1,4 +1,4 @@
-# Hotel-Website
+# Guest House
 A simple hotel website
 
-Tech :- HTML, CSS, Bootstrap, Django REST Framework
+Tech :- HTML, CSS, Bootstrap, JavaScript
