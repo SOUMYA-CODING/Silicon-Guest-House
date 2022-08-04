@@ -1,3 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+# Admin Dashboard Page
+def AdminDashboardPage(request):
+    return render(request, 'adminSection/customadmin.html')
