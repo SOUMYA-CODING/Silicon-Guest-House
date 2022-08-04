@@ -256,8 +256,69 @@ html {
     margin-left: 280px;
 }
 
-.main-conatiner header nav{
+.main-conatiner header nav {
     width: 100%;
-    background-color: #2C5364;
+    box-shadow: 0px 0px 8px 0px #111;
+}
+
+.navbar-brand {
+    color: #111;
+}
+
+.navbar-brand:hover {
+    color: #111;
+}
+
+.main-conatiner .body-container {
+    padding: 1rem;
+}
+
+/* ----- Dashboard ----- */
+.counters-display {
+    display: flex;
+    justify-content: start;
+}
+
+.counters-display .card {
+    width: 350px;
+    margin: 10px;
+}
+
+.counters-display .card:nth-child(1) {
+    background-color: rgba(45, 116, 255, 0.9);
+}
+
+.counters-display .card:nth-child(2) {
+    background-color: rgba(243, 141, 21, 0.9);
+}
+
+.counters-display .card:nth-child(3) {
+    background-color: rgba(20, 194, 90, 0.9);
+}
+
+.counters-display .card .card-body {
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.counters-display .card i {
+    font-size: 30px;
+    margin: 10px;
+    color: #fff;
+}
+
+.counters-display .card section {
+    margin-left: 1rem;
+}
+
+.counters-display .card h4 {
+    font-size: 35px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.counters-display .card p {
     color: #fff;
 }

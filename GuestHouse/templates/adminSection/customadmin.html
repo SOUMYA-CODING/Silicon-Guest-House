@@ -8,6 +8,42 @@
 <title>Silicon Guest House | Dashboard</title>
 {% endblock title %}
 
-<!-- Body -->
+<!-- Page Title -->
+{% block navbrand %}
+<a class="navbar-brand" href="#">Dashboard</a>
+{% endblock navbrand %}
+
+<!-- Content -->
 {% block content %}
+
+<div class="counters-display">
+    <div class="card">
+        <div class="card-body">
+            <i class="fa-solid fa-users"></i>
+            <section>
+                <h4>8</h4> 
+                <p>Total Users</p>
+            </section>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <i class="fa-solid fa-users"></i>
+            <section>
+                <h4>7</h4>
+                <p>Total Rooms Booked</p>
+            </section>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <i class="fa-solid fa-money-bill"></i>
+            <section>
+                <h4>Rs 4500</h4>
+                <p>Total Income</p>
+            </section>
+        </div>
+    </div>
+</div>
+
 {% endblock content %}

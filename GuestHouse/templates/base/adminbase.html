@@ -36,7 +36,10 @@
             </a>
             <hr>
             <ul class="nav nav-pills">
-                <li><a href="" class="nav-link active"><i class="fa-solid fa-house"></i> &nbsp; Home</a></li>
+                <li><a href="" class="nav-link active"><i class="fa-solid fa-house"></i> &nbsp; Dashboard</a></li>
+            </ul>
+            <ul class="nav nav-pills">
+                <li><a href="" class="nav-link"><i class="fa-solid fa-users"></i> &nbsp; Users</a></li>
             </ul>
             <ul class="nav nav-pills">
                 <li><a href="" class="nav-link"><i class="fa-solid fa-ticket"></i> &nbsp; Booking</a></li>
@@ -46,32 +49,42 @@
             <header>
                 <nav class="navbar navbar-expand-lg">
                     <div class="container">
+                        <!-- Page Title -->
+                        {% block navbrand %}
+
+                        {% endblock navbrand %}
                         <ul class="navbar-nav ms-auto">
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                     data-bs-toggle="dropdown" aria-expanded="false">
-                                    Dropdown
+                                    Welcome, Soumya
                                 </a>
-                                <ul class="dropdown-menu dropstart" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-user"></i> &nbsp; View
+                                            Profile</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> &nbsp;
+                                            Settings</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#"><i
+                                                class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Logout </a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>
                     </div>
                 </nav>
             </header>
+
+            <div class="body-container">
+                <!-- Content -->
+                {% block content %}
+
+                {% endblock content %}
+            </div>
         </div>
     </div>
-
-    <!-- Body -->
-    {% block content %}
-
-    {% endblock content %}
 
     <!-- Bootstrap CDN Link -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
