@@ -1,0 +1,166 @@
+{% extends "base/userbase.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Silicon Guest House</title>
+{% endblock title %}
+
+<!-- Body -->
+{% block content %}
+
+<!-- Home Page -->
+<div id="home-page">
+    <header class="header-wrapper">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container">
+                <a class="navbar-brand" href="#"><img
+                        src="https://silicon.ac.in/wp-content/themes/sit/assets/img/sit-logo.svg" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars-staggered menu-btn"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#home-page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about-page">About Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#room-page">Rooms</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#service-page">Service</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sign-btn" href="">Sign In</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="home-page-wrapper container">
+        <section class="banner">
+            <h1>Welcome to <br> Silicon Guest House</h1>
+            <p>SiliconTech’s well-appointed, modern guest house provides accommodation to
+                individuals and groups associated with official visits or guests visiting our campus</p>
+            <a href="" class="btn book-now-btn">Book Now <svg width="37" height="16" viewBox="0 0 37 16" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M36.7036 8.8644C37.0959 8.4756 37.0987 7.84244 36.7099 7.4502L30.374 1.05826C29.9852 0.666024 29.3521 0.663234 28.9598 1.05203C28.5676 1.44083 28.5648 2.07399 28.9536 2.46623L34.5855 8.14795L28.9037 13.7798C28.5115 14.1686 28.5087 14.8018 28.8975 15.194C29.2863 15.5863 29.9195 15.5891 30.3117 15.2003L36.7036 8.8644ZM0.995595 8.99999L35.9953 9.15417L36.0041 7.15419L1.00441 7.00001L0.995595 8.99999Z"
+                        fill="white" />
+                </svg>
+            </a>
+        </section>
+    </div>
+</div>
+
+<!-- Booking Section -->
+<div id="booking-section" class="container-fluid">
+    <form action="">
+        <div class="form-floating">
+            <input type="date" class="form-control" id="check_in" placeholder="Check-in" required>
+            <label for="check_in">Check-in</label>
+        </div>
+        <div class="form-floating">
+            <input type="date" class="form-control" id="check_out" placeholder="check-out" required>
+            <label for="check_out">check-out</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="adult" placeholder="Adult" required>
+            <label for="adult">Adult</label>
+        </div>
+        <div class="form-floating">
+            <input type="number" class="form-control" id="children" placeholder="Children" required>
+            <label for="children">Children</label>
+        </div>
+        <a class="btn">Check Availability</a>
+    </form>
+</div>
+
+<!-- About Page -->
+<div id="about-page" class="container">
+    <div class="about-page-wrapper">
+        <section>
+            <h5 id="header-title">Welcome to Silicon Guest House</h5>
+            <h2 class="mb-3" id="header-text">Relaxing Pleasure</h2>
+            <p>SiliconTech’s well-appointed, modern guest house provides accommodation to individuals and groups
+                associated with official visits or guests visiting our campus. The guest house has 16 rooms,
+                including four suites, six standard AC rooms, and six non-AC rooms.
+
+                <br><br>
+
+                Every room has a twin sharing/ double bed with attached bathrooms, an intercom facility, and a
+                refreshment kit for every guest. They come with a flat-screen television with satellite channels,
+                free Wi-Fi, and 24 hours water availability. The guest house has a luggage store and laundry
+                service. Guests get their early morning tea/coffee in the room. Food is available in the Silicon
+                canteen and filtered drinking water in the rooms.
+            </p>
+            <a href="" class="btn">Explore More!</a>
+        </section>
+        <section class="about-image-section">
+            <img src=" {% static 'images/banner-1.png' %} " alt="">
+        </section>
+    </div>
+</div>
+
+<!-- Rooms Page -->
+<div id="room-page" class="container">
+    <div class="text-center mb-4">
+        <h5 id="header-title">Recommend for you</h5>
+        <h2 class="mb-3" id="header-text">Our Favourite Rooms</h2>
+    </div>
+    <div class="room-page-wrapper">
+        <div class="card">
+            <img src="{% static 'images/gh1.jpg' %}" alt="">
+            <div class="description">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h5 class="mb-1 text-dark">Twin Sharing Bedroom</h5>
+                        <h5 class="mb-3 text-danger">Rs : 1500</h5>
+                    </div>
+                    <div class="col">
+                        <a href="" class="btn"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/gh2.jpg' %}" alt="">
+            <div class="description">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h5 class="mb-1 text-dark">Double bed Room</h5>
+                        <h5 class="mb-3 text-danger">Rs : 1500</h5>
+                    </div>
+                    <div class="col">
+                        <a href="" class="btn"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'images/gh3.jpg' %}" alt="">
+            <div class="description">
+                <div class="row">
+                    <div class="col-md-9">
+                        <h5 class="mb-1 text-dark">AC Room</h5>
+                        <h5 class="mb-3 text-danger">Rs : 1500</h5>
+                    </div>
+                    <div class="col">
+                        <a href="" class="btn"><i class="fa-solid fa-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

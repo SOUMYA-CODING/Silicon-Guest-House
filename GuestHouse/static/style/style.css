@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* ----- Common ----- */
+#header-text {
+    font-size: 35px;
+    font-weight: bolder;
+    letter-spacing: 1.5px;
+}
+
+#header-title {
+    font-size: 18px;
+    color: royalblue;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ----- Home Page ----- */
+#home-page {
+    width: 100%;
+    height: auto;
+}
+
+.header-wrapper .navbar {
+    background-color: #fff;
+}
+
+.header-wrapper .navbar-brand img {
+    width: 100px;
+}
+
+.header-wrapper .nav-item .nav-link {
+    color: #111;
+    text-transform: uppercase;
+    margin: 10px;
+}
+
+.navbar .nav-item .nav-link:hover {
+    color: royalblue;
+}
+
+.header-wrapper .nav-item .sign-btn {
+    color: royalblue;
+    border: 2px solid royalblue;
+    border-radius: 5px;
+    text-transform: none;
+}
+
+.header-wrapper .nav-item .sign-btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+.header-wrapper .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.home-page-wrapper {
+    width: 100%;
+    height: auto;
+    margin: 5.5rem 0;
+}
+
+.home-page-wrapper .banner {
+    height: 85vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url('https://silicon.ac.in/wp-content/uploads/2021/07/1-1-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    padding: 15% 4%;
+    color: #fff;
+}
+
+.home-page-wrapper .banner h1 {
+    font-size: 55px;
+    font-weight: 600;
+}
+
+.home-page-wrapper .banner p {
+    font-size: 18px;
+    width: 80%;
+    letter-spacing: 1px;
+}
+
+.home-page-wrapper .book-now-btn {
+    padding: .7rem 2rem;
+    background-color: royalblue;
+    color: #fff;
+    position: relative;
+}
+
+.home-page-wrapper .book-now-btn svg {
+    position: absolute;
+    margin: .3rem 1rem;
+}
+
+.home-page-wrapper .book-now-btn:focus {
+    box-shadow: none;
+}
+
+.home-page-wrapper .book-now-btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+    color: #fff;
+}
+
+/* ----- Booking Section ----- */
+#booking-section {
+    width: 100%;
+    height: auto;
+    background-color: #d8d8d8;
+    padding: 1.5rem 0;
+}
+
+#booking-section form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#booking-section form .form-control {
+    width: 250px;
+}
+
+#booking-section form .form-control:focus {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#booking-section form .form-control:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#booking-section form .btn {
+    color: #fff;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#booking-section form .btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+/* ----- About Page ----- */
+#about-page {
+    width: 100%;
+    height: auto;
+    padding: 7rem 0;
+}
+
+.about-page-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-page-wrapper p {
+    width: 85%;
+}
+
+.about-page-wrapper .btn {
+    color: #fff;
+    background-color: royalblue;
+}
+
+.about-page-wrapper .btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+/* ----- Room Page ----- */
+#room-page {
+    width: 100%;
+    height: auto;
+    padding: 7rem 0;
+}
+
+.room-page-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.room-page-wrapper .card {
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.room-page-wrapper .card:hover {
+    box-shadow: 0px 0px 8px #111;
+}
+
+.room-page-wrapper .card img {
+    border-radius: 15px 15px 0 0;
+}
+
+.room-page-wrapper .card .description {
+    padding: 1rem;
+}
+
+.room-page-wrapper .card .description .col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.room-page-wrapper .card .description .btn {
+    color: #fff;
+    background-color: royalblue;
+    border-radius: 50px;
+}
+
+.room-page-wrapper .card .description .btn:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}

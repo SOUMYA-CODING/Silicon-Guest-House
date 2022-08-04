@@ -1,0 +1,97 @@
+@media only screen and (max-width: 480px) {
+
+    /* ----- Common ----- */
+    #header-text {
+        font-size: 30px;
+        font-weight: bolder;
+        letter-spacing: 1.5px;
+    }
+
+    /* ----- Home Page ----- */
+    .header-wrapper .nav-item .sign-btn {
+        width: 40%;
+        text-align: center;
+    }
+
+    .home-page-wrapper .banner {
+        height: auto;
+        padding: auto;
+    }
+
+    .home-page-wrapper .banner h1 {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .home-page-wrapper .banner p {
+        font-size: 16px;
+        width: 100%;
+        letter-spacing: 1px;
+    }
+
+    .home-page-wrapper .book-now-btn {
+        padding: .7rem 2rem;
+        background-color: royalblue;
+        color: #fff;
+        position: relative;
+    }
+
+    .home-page-wrapper .book-now-btn svg {
+        position: absolute;
+        margin: .3rem 1rem;
+    }
+
+    /* ----- Booking Section ----- */
+    #booking-section {
+        padding: 1.5rem 1rem;
+    }
+
+    #booking-section form {
+        flex-direction: column;
+    }
+
+    #booking-section form .form-control {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* ----- About Page ----- */
+    #about-page {
+        width: 100%;
+        height: auto;
+        padding: 5.5rem 1rem;
+    }
+
+    .about-page-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-page-wrapper p {
+        width: 100%;
+    }
+
+    .about-page-wrapper .about-image-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .about-page-wrapper .about-image-section img {
+        width: 330px;
+    }
+
+    /* ----- Room Page ----- */
+    #room-page {
+        padding: 5.5rem 1rem;
+    }
+
+    .room-page-wrapper {
+        flex-direction: column;
+    }
+
+    .room-page-wrapper .card .description .col {
+        justify-content: end;
+    }
+}
