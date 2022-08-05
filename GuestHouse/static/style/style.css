@@ -286,14 +286,17 @@ html {
 
 .counters-display .card:nth-child(1) {
     background-color: rgba(45, 116, 255, 0.9);
+    box-shadow: 0px 0px 8px 0px rgb(45, 116, 255);
 }
 
 .counters-display .card:nth-child(2) {
     background-color: rgba(243, 141, 21, 0.9);
+    box-shadow: 0px 0px 8px 0px rgb(243, 141, 21);
 }
 
 .counters-display .card:nth-child(3) {
     background-color: rgba(20, 194, 90, 0.9);
+    box-shadow: 0px 0px 8px 0px rgb(20, 194, 90);
 }
 
 .counters-display .card .card-body {
