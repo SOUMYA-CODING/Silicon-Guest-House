@@ -274,6 +274,10 @@ html {
 }
 
 /* ----- Dashboard ----- */
+.dashboard-page {
+    height: 100%;
+}
+
 .dashboard-page .counters-display {
     display: flex;
     justify-content: start;
@@ -324,4 +328,20 @@ html {
 
 .dashboard-page .counters-display .card p {
     color: #fff;
+}
+
+.dashboard-page .recent-rooms-booking,
+.dashboard-page .recent-user {
+    height: 250px;
+    overflow-y: scroll;
+}
+
+.dashboard-page .messages-section {
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.dashboard-page table thead {
+    position: sticky;
+    top: 0;
 }
