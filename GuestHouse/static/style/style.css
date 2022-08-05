@@ -274,54 +274,54 @@ html {
 }
 
 /* ----- Dashboard ----- */
-.counters-display {
+.dashboard-page .counters-display {
     display: flex;
     justify-content: start;
 }
 
-.counters-display .card {
+.dashboard-page .counters-display .card {
     width: 350px;
     margin: 10px;
 }
 
-.counters-display .card:nth-child(1) {
+.dashboard-page .counters-display .card:nth-child(1) {
     background-color: rgba(45, 116, 255, 0.9);
     box-shadow: 0px 0px 8px 0px rgb(45, 116, 255);
 }
 
-.counters-display .card:nth-child(2) {
+.dashboard-page .counters-display .card:nth-child(2) {
     background-color: rgba(243, 141, 21, 0.9);
     box-shadow: 0px 0px 8px 0px rgb(243, 141, 21);
 }
 
-.counters-display .card:nth-child(3) {
+.dashboard-page .counters-display .card:nth-child(3) {
     background-color: rgba(20, 194, 90, 0.9);
     box-shadow: 0px 0px 8px 0px rgb(20, 194, 90);
 }
 
-.counters-display .card .card-body {
+.dashboard-page .counters-display .card .card-body {
     height: 100%;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-.counters-display .card i {
+.dashboard-page .counters-display .card i {
     font-size: 30px;
     margin: 10px;
     color: #fff;
 }
 
-.counters-display .card section {
+.dashboard-page .counters-display .card section {
     margin-left: 1rem;
 }
 
-.counters-display .card h4 {
+.dashboard-page .counters-display .card h4 {
     font-size: 35px;
     font-weight: 800;
     color: #fff;
 }
 
-.counters-display .card p {
+.dashboard-page .counters-display .card p {
     color: #fff;
 }
