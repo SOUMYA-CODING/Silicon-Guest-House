@@ -193,36 +193,17 @@ html {
 .room-page-wrapper .card {
     margin: 5px;
     cursor: pointer;
-    border-radius: 15px;
 }
 
 .room-page-wrapper .card:hover {
     box-shadow: 0px 0px 8px #111;
 }
 
-.room-page-wrapper .card img {
-    border-radius: 15px 15px 0 0;
-}
-
-.room-page-wrapper .card .description {
-    padding: 1rem;
-}
-
-.room-page-wrapper .card .description .col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.room-page-wrapper .card .description .btn {
-    color: #fff;
+.room-page-wrapper .card .btn {
     background-color: royalblue;
-    border-radius: 50px;
+    color: #fff;
 }
 
-.room-page-wrapper .card .description .btn:hover {
-    box-shadow: 0px 0px 8px 0px royalblue;
-}
 
 /* ----- Service Page ----- */
 #service-page {
