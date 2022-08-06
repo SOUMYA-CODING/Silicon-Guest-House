@@ -225,12 +225,34 @@ html {
 }
 
 /* ----- Service Page ----- */
-#service-page{
+#service-page {
     width: 100%;
     height: auto;
     padding: 7rem 0;
 }
 
+.service-page-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.service-page-wrapper .card {
+    width: 16rem;
+    height: 14rem;
+    margin: 1rem;
+    border: none;
+    box-shadow: 0px 0px 8px 0px;
+    cursor: pointer;
+}
+
+.service-page-wrapper .card:hover {
+    transform: translateY(-5px);
+}
+
+.service-page-wrapper .service-banner img {
+    width: 700px;
+}
 
 
 /* ----- Admin Section ----- */

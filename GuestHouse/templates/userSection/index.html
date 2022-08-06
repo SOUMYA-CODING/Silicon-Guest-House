@@ -163,7 +163,6 @@
     </div>
 </div>
 
-
 <!-- Services Page -->
 <div id="service-page" class="container">
     <div class="text-center mb-4">
@@ -174,7 +173,7 @@
         <section class="service-banner">
             <img src="{% static 'images/two.png' %}" alt="">
         </section>
-        <section class="d-flex flex-wrap">
+        <section class="d-flex flex-wrap service-card">
             <div class="card">
                 <div class="card-body">
                     <img src="https://img.icons8.com/color/96/000000/wifi--v1.png" width="30px" class="mb-3">
@@ -207,5 +206,111 @@
         </section>
     </div>
 </div>
+
+<!-- Footer Section -->
+<footer id="footer">
+    <div class="container">
+        <div class="footer-contact py-5">
+            <div class="row mb-5">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3740.7806763365925!2d85.80414731500188!3d20.350677286369518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1908e064769e73%3A0x9288172f3a98c7a4!2sSilicon%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1659372211116!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="single-section">
+                        <i class="fa-solid fa-map-location"></i>
+                        <div class="footer-contact-text">
+                            <h4>Find Us</h4>
+                            <span>Silicon Institute of Technology, <br> Silicon Hills, Patia, Bhubaneswar</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="single-section">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="footer-contact-text">
+                            <h4>Call Us</h4>
+                            <span>+91 9937289499 / +91 7381499499</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="single-section">
+                        <i class="fa-solid fa-envelope"></i>
+                        <div class="footer-contact-text">
+                            <h4>Mail Us</h4>
+                            <span>info@silicon.ac.in</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content">
+            <div class="row">
+                <div class="col">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <img src="https://silicon.ac.in/wp-content/themes/sit/assets/img/footer_logo.svg"
+                                class="img-fluid mb-2" alt="">
+                        </div>
+                        <div class="footer-text">
+                            <p>SiliconTech has excellent facilities that ensure that students live in ease, joy, and
+                                comfort. There are well-appointed hostel rooms, regular bus services, an
+                                air-conditioned auditorium, large lecture theatres, an outdoor Wi-Fi zone, different
+                                food courts, and a guest house.
+                            </p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href=""><i class="fa-brands fa-facebook"></i></a>
+                            <a href=""><i class="fa-brands fa-twitter"></i></a>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-widget">
+                        <div class="footer-heading">
+                            <h3>Useful Links</h3>
+                            <ul>
+                                <li><a href="#home-page">Home</a></li>
+                                <li><a href="#about-page">About</a></li>
+                                <li><a href="#room-page">Room</a></li>
+                                <li><a href="#service-page">Services</a></li>
+                                <li><a href="#testimonial-page">Testimonial</a></li>
+                                <li><a href="">FAQ</a></li>
+                                <li><a href="#service-page">Features</a></li>
+                                <li><a href="https://silicon.ac.in/privacy-policy/">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="footer-widget">
+                        <div class="footer-heading">
+                            <h3>Contact us</h3>
+                        </div>
+                        <form action="">
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail</label>
+                                <input type="email" class="form-control" id="email">
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" rows="3"></textarea>
+                            </div>
+                            <button class="btn btn-danger">Send</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright text-center bg-dark text-light py-1">
+        <p>&copy; 2022</p>
+    </div>
+</footer>
 
 {% endblock content %}
