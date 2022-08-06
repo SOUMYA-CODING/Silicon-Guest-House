@@ -224,6 +224,17 @@ html {
     box-shadow: 0px 0px 8px 0px royalblue;
 }
 
+/* ----- Service Page ----- */
+#service-page{
+    width: 100%;
+    height: auto;
+    padding: 7rem 0;
+}
+
+
+
+/* ----- Admin Section ----- */
+
 /* ----- Side Nav Bar ----- */
 .side-navbar {
     width: 280px;
