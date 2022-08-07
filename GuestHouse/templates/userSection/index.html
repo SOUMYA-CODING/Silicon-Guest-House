@@ -37,9 +37,28 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#service-page">Service</a>
                         </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Welcome, {{user.username}}
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="">My Booking </a></li>
+                                <li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href=" {% url 'Logout' %} "><i
+                                            class="fa-solid fa-arrow-right-from-bracket"></i> &nbsp; Logout </a></li>
+                            </ul>
+                        </li>
+
+                        {% else %}
                         <li class="nav-item">
                             <a class="nav-link sign-btn" href="{% url 'LoginPage' %}">Sign In</a>
                         </li>
+                        {% endif %}
                     </ul>
                 </div>
             </div>

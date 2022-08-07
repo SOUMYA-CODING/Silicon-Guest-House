@@ -17,18 +17,35 @@
 {% block content %}
 
 <div class="authentication-wrapper">
-    <form action="" autocomplete="off" method="post">
+    <form action="{% url 'RegistrationPage' %}" autocomplete="off" method="post"
+        onsubmit="return registrationvalidationFun()">
+        {% csrf_token %}
         <h3>Get's Started.</h3>
         <p>Already have a account? <a href=" {% url 'LoginPage' %} ">Log in</a></p>
+        <div>
+            <span>
+                {% if messages %}
+                {% for message in messages %}
+                <p class="{{message.tags}}">{{message}}</p>
+                {% endfor %}
+                {% endif %}
+            </span>
+        </div>
+        <div class="mb-3">
+            <label for="sic_number" class="form-label">SIC Number</label>
+            <input type="text" class="form-control" id="sic_number" name="sic_number">
+            <span id="sic_number_error" class="error_message"></span>
+        </div>
+
         <div class="mb-3">
             <label for="email" class="form-label">Email address</label>
-            <input type="email" class="form-control" id="email">
+            <input type="email" class="form-control" id="email" name="email">
             <span id="email_error" class="error_message"></span>
         </div>
 
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password">
+            <input type="password" class="form-control" id="password" name="password">
             <span id="password_error" class="error_message"></span>
         </div>
 
@@ -52,3 +69,8 @@
 </div>
 
 {% endblock content %}
+
+<!-- Script -->
+{% block script %}
+<script src="{% static 'script/authentication.js' %}"></script>
+{% endblock script %}
