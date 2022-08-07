@@ -204,6 +204,15 @@ html {
     color: #fff;
 }
 
+.room-page-wrapper .card .description {
+    display: none;
+}
+
+.room-page-wrapper .card:hover .description {
+    background-color: rgba(0, 0, 0, 0.8);
+    display: block;
+}
+
 
 /* ----- Service Page ----- */
 #service-page {

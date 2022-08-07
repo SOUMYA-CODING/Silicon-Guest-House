@@ -51,7 +51,7 @@
             <h1>Welcome to <br> Silicon Guest House</h1>
             <p>SiliconTech’s well-appointed, modern guest house provides accommodation to
                 individuals and groups associated with official visits or guests visiting our campus</p>
-            <a href="" class="btn book-now-btn">Book Now <svg width="37" height="16" viewBox="0 0 37 16" fill="none"
+            <a href=" {% url 'BookingPage' %} " class="btn book-now-btn">Book Now <svg width="37" height="16" viewBox="0 0 37 16" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M36.7036 8.8644C37.0959 8.4756 37.0987 7.84244 36.7099 7.4502L30.374 1.05826C29.9852 0.666024 29.3521 0.663234 28.9598 1.05203C28.5676 1.44083 28.5648 2.07399 28.9536 2.46623L34.5855 8.14795L28.9037 13.7798C28.5115 14.1686 28.5087 14.8018 28.8975 15.194C29.2863 15.5863 29.9195 15.5891 30.3117 15.2003L36.7036 8.8644ZM0.995595 8.99999L35.9953 9.15417L36.0041 7.15419L1.00441 7.00001L0.995595 8.99999Z"
@@ -121,25 +121,25 @@
         <div class="card">
             <img src="{% static 'images/gh1.jpg' %}" class="card-img" alt="...">
             <div class="card-img-overlay text-light description">
-                <h4 class="card-title mb-3">Twin sharing</h4>
+                <h4 class="card-title mb-3">AC Room</h4>
                 <p class="card-text">Rs 1500 <strike class="text-danger">Rs 1750</strike></p>
-                <a href="Booking/view_rooms.html" class="btn">Book Now</a>
+                <a href=" {% url 'BookingPage' %} " class="btn">Book Now</a>
             </div>
         </div>
         <div class="card">
             <img src="{% static 'images/gh2.jpg' %}" class="card-img" alt="...">
             <div class="card-img-overlay text-light description">
-                <h4 class="card-title mb-3">Double bed Room</h4>
+                <h4 class="card-title mb-3">NON AC ROOM</h4>
                 <p class="card-text">Rs 1500 <strike class="text-danger">Rs 1750</strike></p>
-                <a href="Booking/view_rooms.html" class="btn">Book Now</a>
+                <a href=" {% url 'BookingPage' %} " class="btn">Book Now</a>
             </div>
         </div>
         <div class="card">
             <img src="{% static 'images/gh3.jpg' %}" class="card-img" alt="...">
             <div class="card-img-overlay text-light description">
-                <h4 class="card-title mb-3">AC Room</h4>
+                <h4 class="card-title mb-3">Deluxe Room</h4>
                 <p class="card-text">Rs 1500 <strike class="text-danger">Rs 1750</strike></p>
-                <a href="Booking/view_rooms.html" class="btn">Book Now</a>
+                <a href=" {% url 'BookingPage' %} " class="btn">Book Now</a>
             </div>
         </div>
     </div>
