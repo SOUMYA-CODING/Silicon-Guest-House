@@ -28,8 +28,22 @@ html {
 }
 
 .error_message {
-    color: red;
+    color: #FF4B2B;
     font-size: 12px;
+}
+
+.error {
+    width: 100%;
+    background-color: #FF4B2B;
+    color: #fff;
+    padding: 10px;
+}
+
+.success {
+    width: 100%;
+    background-color: green;
+    color: #fff;
+    padding: 10px;
 }
 
 /* ----- Home Page ----- */
@@ -392,12 +406,11 @@ html {
 
 .booking-page-wrapper section:nth-child(1) {
     width: 70%;
-    padding: 10px;
 }
 
 .booking-page-wrapper section:nth-child(2) {
     width: 30%;
-    padding: 10px;
+    margin-left: 1rem;
 }
 
 .booking-page-wrapper h4 {

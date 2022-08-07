@@ -37,6 +37,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#service-page">Service</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'AdminDashboardPage' %}">Admin</a>
+                        </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
