@@ -1,0 +1,41 @@
+{% extends "base/authenticationbase.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Silicon Guest House | Login</title>
+{% endblock title %}
+
+<!-- Image Section -->
+{% block images %}
+<img src="{% static 'images/one.png' %}" alt="">
+{% endblock images %}
+
+<!-- Body -->
+{% block content %} 
+
+<div class="authentication-wrapper">    
+    <form action="" autocomplete="off" method="post">
+        <h3>Welcome Back!</h3>
+        <p>Don't have a account? <a href=" {% url 'RegistrationPage' %} ">Register</a></p>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email">
+            <span id="email_error" class="error_message"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password">
+            <span id="password_error" class="error_message"></span>
+        </div>
+
+        <div class="btn-submit">
+            <button class="btn">Login</button>
+        </div>
+    </form>
+</div>
+
+{% endblock content %}

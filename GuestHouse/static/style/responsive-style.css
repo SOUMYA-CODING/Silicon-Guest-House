@@ -177,4 +177,21 @@
     .booking-details-card {
         margin-top: 16px;
     }
+
+    /* ----- Authentication Page ----- */
+    .authentication-wrapper {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .authentication-wrapper section {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .authentication-wrapper form {
+        width: 350px;
+    }
+
 }
