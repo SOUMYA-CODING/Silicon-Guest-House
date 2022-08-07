@@ -9,11 +9,6 @@ def HomePage(request):
     return render(request, 'userSection/index.html')
 
 
-# Booking Page
-def BookingPage(request):
-    return render(request, 'bookingSection/booking.html')
-
-
 # Login Page
 def LoginPage(request):
     # Error
@@ -26,11 +21,14 @@ def LoginPage(request):
 
         user = authenticate(request, username=username, password=password)
 
-        if user is not None:
-            login(request, user)
-            return redirect('HomePage')
+        if user.is_superuser:
+            return redirect('AdminDashboardPage')
         else:
-            messages.error(request, "Invalid username or password")
+            if user is not None:
+                login(request, user)
+                return redirect('HomePage')
+            else:
+                messages.error(request, "Invalid username or password")
 
     return render(request, 'authentication/login.html')
 
