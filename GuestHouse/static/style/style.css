@@ -27,6 +27,11 @@ html {
     scroll-behavior: smooth;
 }
 
+.error_message {
+    color: red;
+    font-size: 12px;
+}
+
 /* ----- Home Page ----- */
 #home-page {
     width: 100%;
@@ -372,6 +377,35 @@ html {
 
 #footer form .form-control:hover {
     box-shadow: 0px 0px 8px 0px #fff;
+}
+
+/* ----- Booking Page ----- */
+#booking-page {
+    width: 100%;
+    height: auto;
+}
+
+.booking-page-wrapper {
+    display: flex;
+}
+
+.booking-page-wrapper section:nth-child(1) {
+    width: 70%;
+    padding: 10px;
+}
+
+.booking-page-wrapper section:nth-child(2) {
+    width: 30%;
+    padding: 10px;
+}
+
+.booking-page-wrapper h4 {
+    color: royalblue;
+}
+
+.booking-details-card section {
+    display: flex;
+    justify-content: space-between;
 }
 
 

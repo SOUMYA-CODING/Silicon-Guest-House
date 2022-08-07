@@ -147,4 +147,34 @@
     .footer-social-icon {
         margin-bottom: 2rem;
     }
+
+    /* ----- Booking Page ----- */
+    .booking-page-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-page-wrapper section:nth-child(1) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .booking-page-wrapper section:nth-child(2) {
+        width: 100%;
+        padding: 0;
+    }
+
+    .booking-page-wrapper form .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .booking-page-wrapper form .row .form-control,
+    .booking-page-wrapper form .row .form-select {
+        margin-bottom: 5px;
+    }
+
+    .booking-details-card {
+        margin-top: 16px;
+    }
 }

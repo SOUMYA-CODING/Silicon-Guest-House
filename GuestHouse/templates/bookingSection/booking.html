@@ -11,6 +11,127 @@
 <!-- Body -->
 {% block content %}
 
+<!-- Booking Page -->
+<div id="booking-page" class="container my-5">
+    <a href=" {% url 'HomePage' %} "><img src="https://silicon.ac.in/wp-content/themes/sit/assets/img/sit-logo.svg"
+            alt=""></a>
 
+    <div class="booking-page-wrapper mt-5">
+        <section>
+            <form action="/" autocomplete="off" method="post">
+                <div class="row mb-3">
+                    <h4>STAYING DETAILS</h4>
+                    <div class="col">
+                        <label for="Check_in" class="form-label">Check-in</label>
+                        <input type="date" class="form-control" id="Check_in" value="">
+                        <span id="Check_in_error" class="error_message"></span>
+                    </div>
+                    <div class="col">
+                        <label for="Check_out" class="form-label">Check-out</label>
+                        <input type="date" class="form-control" id="Check_out" value="">
+                        <span id="Check_out_error" class="error_message"></span>
+                    </div>
+                </div>
+
+                <div class="row mb-5">
+                    <div class="col">
+                        <label for="Adults" class="form-label">Adults</label>
+                        <input type="number" class="form-control" id="Adults" value="">
+                        <span id="Adults_error" class="error_message"></span>
+                    </div>
+                    <div class="col">
+                        <label for="Childrens" class="form-label">Childrens</label>
+                        <input type="number" class="form-control" id="Childrens" value="">
+                        <span id="Childrens_error" class="error_message"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-5">
+                    <h4 class="headline">ROOM DETAILS</h4>
+                    <div class="col">
+                        <label for="room_type" class="form-label">Room Type</label>
+                        <select name="" id="room_type" class="form-select">
+                            <option value="">Select Room Type</option>
+                            <option value="AC Room">AC Room</option>
+                            <option value="NON AC ROOM">NON AC Room</option>
+                            <option value="Deluxe Room">Deluxe Room</option>
+                        </select>
+                        <span id="room_type_error" class="error_message"></span>
+                    </div>
+                    <div class="col">
+                        <label for="number_of_rooms" class="form-label">Number of Rooms</label>
+                        <input type="number" class="form-control" id="number_of_rooms">
+                        <span id="number_of_rooms_error" class="error_message"></span>
+                    </div>
+                </div>
+
+
+                <div class="row mb-3">
+                    <h4>GUEST DETAILS</h4>
+                    <div class="col">
+                        <label for="Name" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="Name">
+                        <span id="Name_error" class="error_message"></span>
+                    </div>
+                    <div class="col">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email">
+                        <span id="email_error" class="error_message"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="phone_number" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="phone_number">
+                        <span id="phone_number_error" class="error_message"></span>
+                    </div>
+                    <div class="col">
+                        <label for="address" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="address">
+                        <span id="address_error" class="error_message"></span>
+                    </div>
+                </div>
+            </form>
+
+        </section>
+        <section>
+            <div class="card booking-details-card">
+                <div class="card-body">
+                    <h4>PRICE BREAK-UP</h4>
+                    <hr>
+                    <section>
+                        <p>Total Days</p>
+                        <p>2 Days</p>
+                    </section>
+                    <section>
+                        <p>Room Price (per room)</p>
+                        <p>Rs 4500 /-</p>
+                    </section>
+                    <section>
+                        <p>Tax & Service Fee</p>
+                        <p>Rs 300 /-</p>
+                    </section>
+                    <hr>
+                    <section>
+                        <p>Total amount to be paid</p>
+                        <p>Rs 4800 /-</p>
+                    </section>
+                    <hr>
+                    <div class="d-flex justify-content-end">
+                        <button class="btn btn-primary m-1" onclick="return bookingValidations()">Procced </button>
+                        <a href=" {% url 'HomePage' %} " class="btn btn-danger m-1">
+                            Cancle</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
 
 {% endblock content %}
+
+<!-- Script -->
+{% block script %}
+<script src="{% static 'script/booking.js' %}"></script>
+{% endblock script %}
