@@ -400,7 +400,7 @@ html {
     height: auto;
 }
 
-.booking-page-wrapper form{
+.booking-page-wrapper form {
     display: flex;
 }
 
@@ -420,6 +420,10 @@ html {
 .booking-details-card section {
     display: flex;
     justify-content: space-between;
+}
+
+.confirm-booking-page-wrapper .row .form-control {
+    background-color: #fff;
 }
 
 /* ----- Authentication Page ----- */

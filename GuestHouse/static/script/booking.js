@@ -166,7 +166,7 @@ document.getElementById("Check_out").addEventListener("change", function () {
     const Check_in = document.getElementById("Check_out").value;
     const Check_out = document.getElementById("Check_out").value;
     let total_date = Date.parse(Check_out) - Date.parse(Check_in);
-    document.getElementById("total_days_label").innerHTML = total_date + " days";
+    document.getElementById("total_days_label").innerHTML = total_date;
 })
 
 
@@ -198,14 +198,14 @@ document.getElementById("number_of_rooms").addEventListener("change", function (
     const data_number_of_rooms = document.getElementById("number_of_rooms").value;
 
     if (data_room_type === "AC Room") {
-        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1500 + " /-";
-        document.getElementById("tax_price").innerHTML = "400 /-";
+        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1500;
+        document.getElementById("tax_price").innerHTML = "400";
     } else if (data_room_type === "NON AC ROOM") {
-        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1700 + " /-";
-        document.getElementById("tax_price").innerHTML = "400 /-";
+        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1700;
+        document.getElementById("tax_price").innerHTML = "400";
     } else if (data_room_type === "Deluxe Room") {
-        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1800 + " /-";
-        document.getElementById("tax_price").innerHTML = "400 /-";
+        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1800;
+        document.getElementById("tax_price").innerHTML = "400";
     }
 
 
@@ -213,6 +213,6 @@ document.getElementById("number_of_rooms").addEventListener("change", function (
     const room_price = document.getElementById("room_price").innerHTML;
     const tax_price = document.getElementById("tax_price").innerHTML;
     const total_amount_price = parseInt(room_price) + parseInt(tax_price);
-    document.getElementById("total_amount_price").innerHTML = total_amount_price + " /-"
+    document.getElementById("total_amount_price").innerHTML = total_amount_price;
 });
 

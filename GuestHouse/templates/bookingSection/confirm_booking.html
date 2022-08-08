@@ -17,72 +17,73 @@
             alt=""></a>
     <h4 class="mt-5 text-primary">CONFIRM YOUR BOOKING DETAILS</h4>
     <div class="confirm-booking-page-wrapper mt-5">
-        <form action="" method="post">
+        <form method="post" action="{% url 'ConfirmBookingPage' %}">
+            {% csrf_token %}
             <div class="row mb-5">
                 <div class="col">
                     <label for="Check_in" class="form-label">Check-in</label>
-                    <input type="text" class="form-control" id="Check_in" name="Check_in" disabled>
+                    <input type="text" class="form-control" id="Check_in" name="Check_in" readonly>
                 </div>
                 <div class="col">
                     <label for="Check_out" class="form-label">Check-out</label>
-                    <input type="text" class="form-control" id="Check_out" name="Check_out" disabled>
+                    <input type="text" class="form-control" id="Check_out" name="Check_out" readonly>
                 </div>
                 <div class="col">
                     <label for="Adults" class="form-label">Adults</label>
-                    <input type="text" class="form-control" id="Adults" name="Adults" disabled>
+                    <input type="text" class="form-control" id="Adults" name="Adults" readonly>
                 </div>
                 <div class="col">
                     <label for="Childrens" class="form-label">Childrens</label>
-                    <input type="text" class="form-control" id="Childrens" name="Childrens" disabled>
+                    <input type="text" class="form-control" id="Childrens" name="Childrens" readonly>
                 </div>
             </div>
 
             <div class="row mb-5">
                 <div class="col">
                     <label for="Name" class="form-label">Full Name</label>
-                    <input type="text" class="form-control" id="Name" name="Name" disabled>
+                    <input type="text" class="form-control" id="Name" name="Name" readonly>
                 </div>
                 <div class="col">
                     <label for="email" class="form-label">Email Address</label>
-                    <input type="text" class="form-control" id="email" name="email" disabled>
+                    <input type="text" class="form-control" id="email" name="email" readonly>
                 </div>
                 <div class="col">
                     <label for="phone_number" class="form-label">Phone Number</label>
-                    <input type="text" class="form-control" id="phone_number" name="phone_number" disabled>
+                    <input type="text" class="form-control" id="phone_number" name="phone_number" readonly>
                 </div>
                 <div class="col">
                     <label for="address" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="address" name="address" disabled>
+                    <input type="text" class="form-control" id="address" name="address" readonly>
                 </div>
             </div>
 
             <div class="row mb-5">
                 <div class="col-md-3">
                     <label for="room_type" class="form-label">Room Type</label>
-                    <input type="text" class="form-control" id="room_type" name="room_type" disabled>
+                    <input type="text" class="form-control" id="room_type" name="room_type" readonly>
                 </div>
                 <div class="col-md-3">
                     <label for="number_of_rooms" class="form-label">Number of Rooms</label>
-                    <input type="text" class="form-control" id="number_of_rooms" name="number_of_rooms" disabled>
+                    <input type="text" class="form-control" id="number_of_rooms" name="number_of_rooms" readonly>
                 </div>
             </div>
 
             <div class="row mb-5">
                 <div class="col">
                     <label for="total_days" class="form-label">Total Days</label>
-                    <input type="text" class="form-control" id="total_days" name="total_days" disabled>
+                    <input type="text" class="form-control" id="total_days" name="total_days" readonly>
                 </div>
                 <div class="col">
                     <label for="total_people" class="form-label">Total Peoples</label>
-                    <input type="text" class="form-control" id="total_people" name="total_people" disabled>
+                    <input type="text" class="form-control" id="total_people" name="total_people" readonly>
                 </div>
                 <div class="col">
                     <label for="room_price" class="form-label">Room Price (per room)</label>
-                    <input type="text" class="form-control" id="room_price" name="room_price" disabled>
+                    <input type="text" class="form-control" id="room_price" name="room_price" readonly>
                 </div>
                 <div class="col">
                     <label for="total_amount_price" class="form-label">Total amount to be paid</label>
-                    <input type="text" class="form-control" id="total_amount_price" name="total_amount_price" disabled>
+                    <input type="text" class="form-control" id="total_amount_price" name="total_amount_price" readonly>
                 </div>
             </div>
 

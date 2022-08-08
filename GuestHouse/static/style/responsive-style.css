@@ -149,7 +149,7 @@
     }
 
     /* ----- Booking Page ----- */
-    .booking-page-wrapper form{
+    .booking-page-wrapper form {
         display: flex;
         flex-direction: column;
     }
@@ -178,6 +178,15 @@
     .booking-details-card {
         margin-top: 16px;
         width: 100%;
+    }
+
+    .confirm-booking-page-wrapper .row {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .confirm-booking-page-wrapper .row .col {
+        margin-top: 7px;
     }
 
     /* ----- Authentication Page ----- */
