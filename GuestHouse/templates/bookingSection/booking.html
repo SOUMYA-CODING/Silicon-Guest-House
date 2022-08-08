@@ -17,8 +17,9 @@
             alt=""></a>
 
     <div class="booking-page-wrapper mt-5">
-        <section>
-            <form action="/" autocomplete="off" method="post">
+        <form action="" autocomplete="off" method="post" onsubmit="return bookingValidations()">
+            {% csrf_token %}
+            <section class="form-details-section">
                 <div class="row mb-3">
                     <h4>STAYING DETAILS</h4>
                     <div class="col">
@@ -66,7 +67,6 @@
                     </div>
                 </div>
 
-
                 <div class="row mb-3">
                     <h4>GUEST DETAILS</h4>
                     <div class="col">
@@ -92,40 +92,44 @@
                         <span id="address_error" class="error_message"></span>
                     </div>
                 </div>
-            </form>
 
-        </section>
-        <section>
-            <div class="card booking-details-card">
-                <div class="card-body">
-                    <h4>PRICE BREAK-UP</h4>
-                    <hr>
-                    <section>
-                        <p>Total Days</p>
-                        <p>2 Days</p>
-                    </section>
-                    <section>
-                        <p>Room Price (per room)</p>
-                        <p>Rs 4500 /-</p>
-                    </section>
-                    <section>
-                        <p>Tax & Service Fee</p>
-                        <p>Rs 300 /-</p>
-                    </section>
-                    <hr>
-                    <section>
-                        <p>Total amount to be paid</p>
-                        <p>Rs 4800 /-</p>
-                    </section>
-                    <hr>
-                    <div class="d-flex justify-content-end">
-                        <button class="btn btn-primary m-1" onclick="return bookingValidations()">Procced </button>
-                        <a href=" {% url 'HomePage' %} " class="btn btn-danger m-1">
-                            Cancle</a>
+            </section>
+            <section class="booking-details-section">
+                <div class="card booking-details-card">
+                    <div class="card-body">
+                        <h4>PRICE BREAK-UP</h4>
+                        <hr>
+                        <section>
+                            <p>Total Days</p>
+                            <p id="total_days_label"></p>
+                        </section>
+                        <section>
+                            <p>Total Peoples</p>
+                            <p id="total_people_label"></p>
+                        </section>
+                        <section>
+                            <p>Room Price (per room)</p>
+                            <p id="room_price"></p>
+                        </section>
+                        <section>
+                            <p>Tax & Service Fee</p>
+                            <p>Rs 300 /-</p>
+                        </section>
+                        <hr>
+                        <section>
+                            <p>Total amount to be paid</p>
+                            <p>Rs 4800 /-</p>
+                        </section>
+                        <hr>
+                        <div class="d-flex justify-content-end">
+                            <button class="btn btn-primary m-1" ons>Procced</button>
+                            <a href=" {% url 'HomePage' %} " class="btn btn-danger m-1">
+                                Cancle</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </form>
     </div>
 </div>
 

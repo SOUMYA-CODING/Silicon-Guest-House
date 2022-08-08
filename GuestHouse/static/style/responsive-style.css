@@ -149,33 +149,35 @@
     }
 
     /* ----- Booking Page ----- */
-    .booking-page-wrapper {
+    .booking-page-wrapper form{
         display: flex;
         flex-direction: column;
     }
 
-    .booking-page-wrapper section:nth-child(1) {
+    .booking-page-wrapper form .form-details-section {
         width: 100%;
         padding: 0;
     }
 
-    .booking-page-wrapper section:nth-child(2) {
+    .booking-page-wrapper form .booking-details-section {
         width: 100%;
         padding: 0;
+        margin-left: 0;
     }
 
-    .booking-page-wrapper form .row {
+    .booking-page-wrapper .row {
         display: flex;
         flex-direction: column;
     }
 
-    .booking-page-wrapper form .row .form-control,
-    .booking-page-wrapper form .row .form-select {
+    .booking-page-wrapper .row .form-control,
+    .booking-page-wrapper .row .form-select {
         margin-bottom: 5px;
     }
 
     .booking-details-card {
         margin-top: 16px;
+        width: 100%;
     }
 
     /* ----- Authentication Page ----- */

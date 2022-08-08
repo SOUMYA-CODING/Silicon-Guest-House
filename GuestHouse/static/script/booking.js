@@ -9,11 +9,9 @@ function bookingValidations() {
     const data_address = document.getElementById("address").value;
     const data_room_type = document.getElementById("room_type").value;
     const data_number_of_rooms = document.getElementById("number_of_rooms").value;
-    const data_ac = document.getElementById("ac");
-    const data_nonac = document.getElementById("nonac");
 
     //Validation of all data received
-    if (!check_in_fun(data_check_in) | !check_out_fun(data_Check_out, data_Check_out) | !adults_fun(data_Adults) | !children_fun(data_Childrens) | !name_fun(data_Name) | !phone_number_fun(phone_number) | !email_fun(data_email) | !address_fun(data_address) | !room_type_fun(data_room_type) | !numbs_of_room_fun(data_number_of_rooms) | !conditioner_type_fun(data_ac, data_nonac)) {
+    if (!check_in_fun(data_check_in) | !check_out_fun(data_check_in, data_Check_out) | !adults_fun(data_Adults) | !children_fun(data_Childrens) | !name_fun(data_Name) | !phone_number_fun(phone_number) | !email_fun(data_email) | !address_fun(data_address) | !room_type_fun(data_room_type) | !numbs_of_room_fun(data_number_of_rooms)) {
         return false;
     }
 }
@@ -30,7 +28,7 @@ function check_in_fun(data_check_in) {
 }
 
 //Check out
-function check_out_fun(data_Check_out, data_check_in) {
+function check_out_fun(data_check_in, data_Check_out) {
     if (data_Check_out === "") {
         document.getElementById("Check_out_error").innerHTML = "Field can't be empty";
         return false;
@@ -138,12 +136,40 @@ function numbs_of_room_fun(data_number_of_rooms) {
     }
 }
 
-function conditioner_type_fun(data_ac, data_nonac) {
-    if (!data_ac.checked && !data_nonac.checked) {
-        document.getElementById("conditioner_error").innerHTML = "Please check any one";
-        return false;
-    } else {
-        document.getElementById("conditioner_error").innerHTML = "";
-        return true;
+// For Total Dates
+document.getElementById("Check_out").addEventListener("change", function () {
+    const Check_in = document.getElementById("Check_out").value;
+    const Check_out = document.getElementById("Check_out").value;
+    let total_date = Date.parse(Check_out) - Date.parse(Check_in);
+    document.getElementById("total_days_label").innerHTML = total_date + " days";
+})
+
+
+// For Adult
+document.getElementById("Adults").addEventListener("change", function () {
+    let Adults = document.getElementById("Adults").value;
+    let Childrens = document.getElementById("Childrens").value;
+    if (Childrens === "") {
+        Childrens = 0
     }
-}
+    let total_people = parseInt(Adults) + parseInt(Childrens)
+    document.getElementById("total_people_label").innerHTML = total_people;
+})
+
+// For Children
+document.getElementById("Childrens").addEventListener("change", function () {
+    let Adults = document.getElementById("Adults").value;
+    let Childrens = document.getElementById("Childrens").value;
+    if (Adults === "") {
+        Adults = 0
+    }
+    let total_people = parseInt(Adults) + parseInt(Childrens)
+    document.getElementById("total_people_label").innerHTML = total_people;
+})
+
+
+/*
+if (quantity > 1) {
+        quantity--;
+        document.getElementById("quantity").value = quantity;
+    }*/

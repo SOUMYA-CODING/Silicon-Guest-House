@@ -400,15 +400,15 @@ html {
     height: auto;
 }
 
-.booking-page-wrapper {
+.booking-page-wrapper form{
     display: flex;
 }
 
-.booking-page-wrapper section:nth-child(1) {
+.booking-page-wrapper form .form-details-section {
     width: 70%;
 }
 
-.booking-page-wrapper section:nth-child(2) {
+.booking-page-wrapper form .booking-details-section {
     width: 30%;
     margin-left: 1rem;
 }
