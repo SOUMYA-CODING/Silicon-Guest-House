@@ -170,24 +170,7 @@ html {
 
 #booking-section form .form-control {
     width: 200px;
-}
-
-/* ----- Booking Section 
-#booking-section {
-    width: 100%;
-    height: auto;
-    background-color: #d8d8d8;
-    padding: 1.5rem 0;
-}
-
-#booking-section form {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-
-#booking-section form .form-control {
-    width: 250px;
+    border-radius: 2px;
 }
 
 #booking-section form .form-control:focus {
@@ -197,18 +180,6 @@ html {
 #booking-section form .form-control:hover {
     box-shadow: 0px 0px 8px 0px royalblue;
 }
-
-#booking-section form .btn {
-    color: #fff;
-    background-color: royalblue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#booking-section form .btn:hover {
-    box-shadow: 0px 0px 8px 0px royalblue;
-}----- */
 
 /* ----- About Page ----- */
 #about-page {
@@ -462,6 +433,21 @@ html {
 
 .confirm-booking-page-wrapper .row .form-control {
     background-color: #fff;
+}
+
+#booking-page .form-control,
+#booking-page .form-select {
+    border-radius: 0px;
+}
+
+#booking-page .form-control:focus,
+#booking-page .form-select:focus {
+    box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#booking-page .form-control:hover,
+#booking-page .form-select:hover {
+    box-shadow: 0px 0px 8px 0px royalblue;
 }
 
 /* ----- Authentication Page ----- */

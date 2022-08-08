@@ -14,6 +14,9 @@ let total_people = localStorage.getItem("total_people");
 let room_price = localStorage.getItem("room_price");
 let total_amount_price = localStorage.getItem("total_amount_price");
 
+//Remove the data from local storage
+window.localStorage.clear();
+localStorage.clear();
 
 //Set the details to input Field
 document.getElementById("Check_in").value = check_in;
@@ -30,7 +33,3 @@ document.getElementById("total_days").value = total_days;
 document.getElementById("total_people").value = total_people;
 document.getElementById("room_price").value = room_price;
 document.getElementById("total_amount_price").value = total_amount_price;
-
-
-//Remove the data from local storage
-//window.localStorage.clear();

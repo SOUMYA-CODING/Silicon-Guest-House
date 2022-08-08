@@ -4,4 +4,6 @@ from . import views
 urlpatterns = [
     path('BookingPage', views.BookingPage, name='BookingPage'),
     path('ConfirmBookingPage', views.ConfirmBookingPage, name='ConfirmBookingPage'),
+    path('OTPPage', views.OTPPage, name='OTPPage'),
+    path('OTPValidation', views.OTPValidation, name='OTPValidation'),
 ]
