@@ -17,19 +17,19 @@
             alt=""></a>
 
     <div class="booking-page-wrapper mt-5">
-        <form action="" autocomplete="off" method="post" onsubmit="return bookingValidations()">
+        <form action="{% url 'ConfirmBookingPage' %}" autocomplete="off" onsubmit="return bookingValidations()">
             {% csrf_token %}
             <section class="form-details-section">
                 <div class="row mb-3">
                     <h4>STAYING DETAILS</h4>
                     <div class="col">
                         <label for="Check_in" class="form-label">Check-in</label>
-                        <input type="date" class="form-control" id="Check_in" value="">
+                        <input type="date" class="form-control" id="Check_in" name="Check_in">
                         <span id="Check_in_error" class="error_message"></span>
                     </div>
                     <div class="col">
                         <label for="Check_out" class="form-label">Check-out</label>
-                        <input type="date" class="form-control" id="Check_out" value="">
+                        <input type="date" class="form-control" id="Check_out" name="Check_out">
                         <span id="Check_out_error" class="error_message"></span>
                     </div>
                 </div>
@@ -37,12 +37,12 @@
                 <div class="row mb-5">
                     <div class="col">
                         <label for="Adults" class="form-label">Adults</label>
-                        <input type="number" class="form-control" id="Adults" value="">
+                        <input type="number" class="form-control" id="Adults" name="Adults">
                         <span id="Adults_error" class="error_message"></span>
                     </div>
                     <div class="col">
                         <label for="Childrens" class="form-label">Childrens</label>
-                        <input type="number" class="form-control" id="Childrens" value="">
+                        <input type="number" class="form-control" id="Childrens" name="Childrens">
                         <span id="Childrens_error" class="error_message"></span>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                     <h4 class="headline">ROOM DETAILS</h4>
                     <div class="col">
                         <label for="room_type" class="form-label">Room Type</label>
-                        <select name="" id="room_type" class="form-select">
+                        <select id="room_type" class="form-select" name="room_type">
                             <option value="">Select Room Type</option>
                             <option value="AC Room">AC Room</option>
                             <option value="NON AC ROOM">NON AC Room</option>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="col">
                         <label for="number_of_rooms" class="form-label">Number of Rooms</label>
-                        <input type="number" class="form-control" id="number_of_rooms">
+                        <input type="number" class="form-control" id="number_of_rooms" name="number_of_rooms">
                         <span id="number_of_rooms_error" class="error_message"></span>
                     </div>
                 </div>
@@ -71,24 +71,24 @@
                     <h4>GUEST DETAILS</h4>
                     <div class="col">
                         <label for="Name" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="Name">
+                        <input type="text" class="form-control" id="Name" name="Name">
                         <span id="Name_error" class="error_message"></span>
                     </div>
                     <div class="col">
                         <label for="email" class="form-label">Email Address</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" class="form-control" id="email" name="email">
                         <span id="email_error" class="error_message"></span>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col">
                         <label for="phone_number" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="phone_number">
+                        <input type="tel" class="form-control" id="phone_number" name="phone_number">
                         <span id="phone_number_error" class="error_message"></span>
                     </div>
                     <div class="col">
                         <label for="address" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="address">
+                        <input type="text" class="form-control" id="address" name="address">
                         <span id="address_error" class="error_message"></span>
                     </div>
                 </div>
@@ -101,28 +101,28 @@
                         <hr>
                         <section>
                             <p>Total Days</p>
-                            <p id="total_days_label"></p>
+                            <label id="total_days_label">0 days</label>
                         </section>
                         <section>
                             <p>Total Peoples</p>
-                            <p id="total_people_label"></p>
+                            <label id="total_people_label">0</label>
                         </section>
                         <section>
                             <p>Room Price (per room)</p>
-                            <p id="room_price"></p>
+                            <label id="room_price">0 /-</label>
                         </section>
                         <section>
                             <p>Tax & Service Fee</p>
-                            <p>Rs 300 /-</p>
+                            <label id="tax_price">0 /-</label>
                         </section>
                         <hr>
                         <section>
                             <p>Total amount to be paid</p>
-                            <p>Rs 4800 /-</p>
+                            <label id="total_amount_price">0 /-</label>
                         </section>
                         <hr>
                         <div class="d-flex justify-content-end">
-                            <button class="btn btn-primary m-1" ons>Procced</button>
+                            <button class="btn btn-primary m-1">Procced</button>
                             <a href=" {% url 'HomePage' %} " class="btn btn-danger m-1">
                                 Cancle</a>
                         </div>

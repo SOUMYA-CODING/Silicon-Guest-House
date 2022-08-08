@@ -14,6 +14,28 @@ function bookingValidations() {
     if (!check_in_fun(data_check_in) | !check_out_fun(data_check_in, data_Check_out) | !adults_fun(data_Adults) | !children_fun(data_Childrens) | !name_fun(data_Name) | !phone_number_fun(phone_number) | !email_fun(data_email) | !address_fun(data_address) | !room_type_fun(data_room_type) | !numbs_of_room_fun(data_number_of_rooms)) {
         return false;
     }
+
+    const data_total_days = document.getElementById("total_days_label").innerHTML;
+    const data_total_people = document.getElementById("total_people_label").innerHTML;
+    const data_room_price = document.getElementById("room_price").innerHTML;
+    const data_total_amount_price = document.getElementById("total_amount_price").innerHTML;
+
+    // Pass the value to Confirm Booking
+    localStorage.setItem("check_in", data_check_in);
+    localStorage.setItem("check_out", data_Check_out);
+    localStorage.setItem("adults", data_Adults);
+    localStorage.setItem("childrens", data_Childrens);
+    localStorage.setItem("name", data_Name);
+    localStorage.setItem("phone_number", phone_number);
+    localStorage.setItem("email", data_email);
+    localStorage.setItem("address", data_address);
+    localStorage.setItem("room_type", data_room_type);
+    localStorage.setItem("number_of_rooms", data_number_of_rooms);
+    localStorage.setItem("total_days", data_total_days);
+    localStorage.setItem("total_people", data_total_people);
+    localStorage.setItem("room_price", data_room_price);
+    localStorage.setItem("total_amount_price", data_total_amount_price);
+
 }
 
 //Check in
@@ -130,6 +152,9 @@ function numbs_of_room_fun(data_number_of_rooms) {
     if (data_number_of_rooms === "") {
         document.getElementById("number_of_rooms_error").innerHTML = "Field can't be empty";
         return false;
+    } else if (data_number_of_rooms < 1) {
+        document.getElementById("number_of_rooms_error").innerHTML = "Can't be 0";
+        return false;
     } else {
         document.getElementById("number_of_rooms_error").innerHTML = "";
         return true;
@@ -167,9 +192,27 @@ document.getElementById("Childrens").addEventListener("change", function () {
     document.getElementById("total_people_label").innerHTML = total_people;
 })
 
+// For Room Type
+document.getElementById("number_of_rooms").addEventListener("change", function () {
+    const data_room_type = document.getElementById("room_type").value;
+    const data_number_of_rooms = document.getElementById("number_of_rooms").value;
 
-/*
-if (quantity > 1) {
-        quantity--;
-        document.getElementById("quantity").value = quantity;
-    }*/
+    if (data_room_type === "AC Room") {
+        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1500 + " /-";
+        document.getElementById("tax_price").innerHTML = "400 /-";
+    } else if (data_room_type === "NON AC ROOM") {
+        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1700 + " /-";
+        document.getElementById("tax_price").innerHTML = "400 /-";
+    } else if (data_room_type === "Deluxe Room") {
+        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1800 + " /-";
+        document.getElementById("tax_price").innerHTML = "400 /-";
+    }
+
+
+    // For calculating total price
+    const room_price = document.getElementById("room_price").innerHTML;
+    const tax_price = document.getElementById("tax_price").innerHTML;
+    const total_amount_price = parseInt(room_price) + parseInt(tax_price);
+    document.getElementById("total_amount_price").innerHTML = total_amount_price + " /-"
+});
+
