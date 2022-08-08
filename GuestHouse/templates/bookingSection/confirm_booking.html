@@ -17,7 +17,7 @@
             alt=""></a>
     <h4 class="mt-5 text-primary">CONFIRM YOUR BOOKING DETAILS</h4>
     <div class="confirm-booking-page-wrapper mt-5">
-        <form method="post" action="{% url 'ConfirmBookingPage' %}">
+        <form method="post" action="{% url 'ConfirmBookingPage' %} ">
             {% csrf_token %}
             <div class="row mb-5">
                 <div class="col">

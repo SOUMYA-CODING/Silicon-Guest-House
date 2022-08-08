@@ -16,7 +16,6 @@ let total_amount_price = localStorage.getItem("total_amount_price");
 
 //Remove the data from local storage
 window.localStorage.clear();
-localStorage.clear();
 
 //Set the details to input Field
 document.getElementById("Check_in").value = check_in;

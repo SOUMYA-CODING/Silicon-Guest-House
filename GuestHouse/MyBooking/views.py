@@ -12,6 +12,7 @@ def BookingPage(request):
 
 # Confirm Booking Page
 def ConfirmBookingPage(request):
+    details = {}
     if request.method == "POST":
         check_in = request.POST.get("Check_in")
         check_out = request.POST.get("Check_out")
@@ -26,28 +27,38 @@ def ConfirmBookingPage(request):
         total_amount = request.POST.get("total_amount_price")
 
         # Store Data in Session
-        request.session['check_in'] = check_in
-        request.session['check_out'] = check_out
-        request.session['total_days'] = total_days
-        request.session['total_peoples'] = total_peoples
-        request.session['room_type'] = room_type
-        request.session['total_rooms'] = total_rooms
-        request.session['full_name'] = full_name
-        request.session['email'] = email
-        request.session['phone_number'] = phone_number
-        request.session['address'] = address
-        request.session['total_amount'] = total_amount
-
-        # To Check
-        # demo = request.session.get('bookingDetails'):
-        # print("demo", demo)
+        details = {
+            'check_in': check_in,
+            'check_out': check_out,
+            'total_days': total_days,
+            'total_peoples': total_peoples,
+            'room_type': room_type,
+            'total_rooms': total_rooms,
+            'full_name': full_name,
+            'email': email,
+            'phone_number': phone_number,
+            'address': address,
+            'total_amount': total_amount,
+        }
+        request.session['details'] = details
+        deta = request.session.get('details')
+        print(deta)
     return render(request, 'bookingSection/confirm_booking.html')
 
-#2022-08-24
+
 # OTP Page
 def OTPPage(request):
-    demo = request.session.get('phone_number')
-    print("demo", demo)
+    useremail = request.session.get('email')
+    if not request.session.get("OTP"):
+        otp = randint(111111, 999999)
+        send_mail(
+            "OTP from Silicon Guest House",
+            f"Your OTP is {otp}",
+            "soumyaprakashsahu2001@gmail.com",
+            [useremail, ],
+            fail_silently=False,
+        )
+        request.session["OTP"] = otp
     return render(request, 'bookingSection/otp.html')
 
 
