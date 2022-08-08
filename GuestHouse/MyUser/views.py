@@ -40,6 +40,8 @@ def RegistrationPage(request):
 
     # Get the data
     if request.method == "POST":
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
         username = request.POST.get('sic_number')
         email = request.POST.get('email')
         password = request.POST.get('password')
@@ -56,6 +58,8 @@ def RegistrationPage(request):
         # Create User
         try:
             user = User.objects.create_user(
+                first_name=first_name,
+                last_name=last_name,
                 username=username,
                 email=email,
                 password=password

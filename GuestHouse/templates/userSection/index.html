@@ -41,7 +41,7 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
-                                Welcome, {{user.username}}
+                                Welcome, {{user.first_name}}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="">My Booking </a></li>
@@ -78,18 +78,42 @@
                 </svg>
             </a>
         </section>
+
+        <div id="booking-section" class="container">
+            <form action="{% url 'BookingPage' %}" autocomplete="off" onsubmit="bookingDetails()">
+                {% csrf_token %}
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="check_in" placeholder="Check-in" required>
+                    <label for="check_in">Check-in</label>
+                </div>
+                <div class="form-floating">
+                    <input type="date" class="form-control" id="check_out" placeholder="Check-out" required>
+                    <label for="check_out">check-out</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="adult" placeholder="Adult" required>
+                    <label for="adult">Adult</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" id="children" placeholder="Children" required>
+                    <label for="children">Children</label>
+                </div>
+                <button class="btn">Check Availability</button>
+            </form>
+        </div>
     </div>
 </div>
 
-<!-- Booking Section -->
+<!-- Booking Section
 <div id="booking-section" class="container-fluid">
-    <form action="">
+    <form action="{% url 'BookingPage' %}" autocomplete="off" onsubmit="bookingDetails()">
+        {% csrf_token %}
         <div class="form-floating">
             <input type="date" class="form-control" id="check_in" placeholder="Check-in" required>
             <label for="check_in">Check-in</label>
         </div>
         <div class="form-floating">
-            <input type="date" class="form-control" id="check_out" placeholder="check-out" required>
+            <input type="date" class="form-control" id="check_out" placeholder="Check-out" required>
             <label for="check_out">check-out</label>
         </div>
         <div class="form-floating">
@@ -100,9 +124,9 @@
             <input type="number" class="form-control" id="children" placeholder="Children" required>
             <label for="children">Children</label>
         </div>
-        <a class="btn">Check Availability</a>
+        <button class="btn">Check Availability</button>
     </form>
-</div>
+</div> -->
 
 <!-- About Page -->
 <div id="about-page" class="container">
@@ -315,3 +339,8 @@
 </footer>
 
 {% endblock content %}
+
+<!-- Script -->
+{% block script %}
+<script src="{% static 'script/index.js' %}"></script>
+{% endblock script %}

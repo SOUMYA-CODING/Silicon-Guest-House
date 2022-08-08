@@ -29,20 +29,12 @@
 
 <body>
     <div id="authentication-page">
-        <div class="authentication-wrapper">
-            <section>
-                <!-- Image Section -->
-                {% block images %}
+        <section>
+            <!-- Body -->
+            {% block content %}
 
-                {% endblock images %}
-            </section>
-            <section>
-                <!-- Body -->
-                {% block content %}
-
-                {% endblock content %}
-            </section>
-        </div>
+            {% endblock content %}
+        </section>
     </div>
 
     <!-- Bootstrap CDN Link -->

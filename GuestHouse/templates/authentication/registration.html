@@ -8,18 +8,14 @@
 <title>Silicon Guest House | Registration</title>
 {% endblock title %}
 
-<!-- Image Section -->
-{% block images %}
-<img src="{% static 'images/three.png' %}" alt="">
-{% endblock images %}
-
 <!-- Body -->
 {% block content %}
 
-<div class="authentication-wrapper">
+<div class="authentication-wrapper my-5">
     <form action="{% url 'RegistrationPage' %}" autocomplete="off" method="post"
         onsubmit="return registrationvalidationFun()">
         {% csrf_token %}
+        <img src="https://silicon.ac.in/wp-content/themes/sit/assets/img/sit-logo.svg" class="mb-4" alt="">
         <h3>Get's Started.</h3>
         <p>Already have a account? <a href=" {% url 'LoginPage' %} ">Log in</a></p>
         <div>
@@ -31,6 +27,18 @@
                 {% endif %}
             </span>
         </div>
+        <div class="mb-3">
+            <label for="first_name" class="form-label">First Name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name">
+            <span id="first_name_error" class="error_message"></span>
+        </div>
+
+        <div class="mb-3">
+            <label for="last_name" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name">
+            <span id="last_name_error" class="error_message"></span>
+        </div>
+
         <div class="mb-3">
             <label for="sic_number" class="form-label">SIC Number</label>
             <input type="text" class="form-control" id="sic_number" name="sic_number">

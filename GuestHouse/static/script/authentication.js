@@ -13,6 +13,8 @@ function loginvalidationFun() {
 //For Registration page validation
 function registrationvalidationFun() {
     //Get the data
+    const first_name = document.getElementById("first_name").value;
+    const last_name = document.getElementById("last_name").value;
     const sic_number = document.getElementById("sic_number").value;
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
@@ -20,12 +22,34 @@ function registrationvalidationFun() {
     const terms_cond = document.getElementById("terms_cond");
 
     //Call the functions
-    if (!sicValidation(sic_number) | !emailValidation(email) | !passwordValidation(password) | !confirmpasswordValidation(password, confirm_password) | !terms_cond_Validation(terms_cond)) {
+    if (!firstNameValidation(first_name) | !lastNameValidation(last_name) | !sicValidation(sic_number) | !emailValidation(email) | !passwordValidation(password) | !confirmpasswordValidation(password, confirm_password) | !terms_cond_Validation(terms_cond)) {
         return false;
     }
 }
 
-//SIC Number of Email
+//Validation of First Name
+function firstNameValidation(first_name) {
+    if (first_name === "") {
+        document.getElementById("first_name_error").innerHTML = "Field can't be empty";
+        return false;
+    } else {
+        document.getElementById("first_name_error").innerHTML = "";
+        return true;
+    }
+}
+
+//Validation of Last Name
+function lastNameValidation(last_name) {
+    if (last_name === "") {
+        document.getElementById("last_name_error").innerHTML = "Field can't be empty";
+        return false;
+    } else {
+        document.getElementById("last_name_error").innerHTML = "";
+        return true;
+    }
+}
+
+//Validation of SIC Number
 function sicValidation(sic_number) {
     if (sic_number === "") {
         document.getElementById("sic_number_error").innerHTML = "Field can't be empty";

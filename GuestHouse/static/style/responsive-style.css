@@ -14,8 +14,8 @@
     }
 
     .home-page-wrapper .banner {
-        height: auto;
-        padding: auto;
+        height: 430px;
+        padding: 1.2rem auto;
     }
 
     .home-page-wrapper .banner h1 {
@@ -41,18 +41,31 @@
         margin: .3rem 1rem;
     }
 
-    /* ----- Booking Section ----- */
-    #booking-section {
-        padding: 1.5rem 1rem;
+    .home-page-wrapper #booking-section {
+        position: relative;
+        height: auto;
+        padding: 1.5rem 0;
+        bottom: 0;
+        margin-top: -4rem;
     }
 
     #booking-section form {
+        width: 95%;
+        padding: 1.5rem 10px;
         flex-direction: column;
     }
 
+    #booking-section form .btn {
+        color: #fff;
+        background-color: royalblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     #booking-section form .form-control {
-        width: 100%;
         margin-bottom: 10px;
+        width: 100%;
     }
 
     /* ----- About Page ----- */
@@ -190,11 +203,6 @@
     }
 
     /* ----- Authentication Page ----- */
-    .authentication-wrapper {
-        height: auto;
-        flex-direction: column;
-    }
-
     .authentication-wrapper section {
         width: 100%;
         height: auto;
@@ -202,7 +210,7 @@
     }
 
     .authentication-wrapper form {
-        width: 350px;
+        padding: 1rem;
     }
 
 }

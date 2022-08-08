@@ -1,3 +1,39 @@
+//Get the value from 
+let check_in_data = localStorage.getItem("check_in_data");
+let check_out_data = localStorage.getItem("check_out_data");
+let adult_data = localStorage.getItem("adult_data");
+let children_data = localStorage.getItem("children_data");
+
+//Remove the data from local storage
+window.localStorage.clear();
+
+//set the date to Labels
+document.getElementById("Check_in").value = check_in_data;
+document.getElementById("Check_out").value = check_out_data;
+document.getElementById("Adults").value = adult_data;
+document.getElementById("Childrens").value = children_data;
+
+const Check_in = document.getElementById("Check_out").value;
+const Check_out = document.getElementById("Check_out").value;
+let total_date = Date.parse(Check_out) - Date.parse(Check_in);
+document.getElementById("total_days_label").innerHTML = total_date;
+
+let Adults = document.getElementById("Adults").value;
+let Childrens = document.getElementById("Childrens").value;
+let total_people = 0
+
+if (Childrens === "") {
+    Childrens = 0
+}
+total_people = parseInt(Adults) + parseInt(Childrens)
+document.getElementById("total_people_label").innerHTML = total_people;
+
+if (Adults === "") {
+    Adults = 0
+}
+total_people = parseInt(Adults) + parseInt(Childrens)
+document.getElementById("total_people_label").innerHTML = total_people;
+
 function bookingValidations() {
     const data_check_in = document.getElementById("Check_in").value;
     const data_Check_out = document.getElementById("Check_out").value;
@@ -215,4 +251,3 @@ document.getElementById("number_of_rooms").addEventListener("change", function (
     const total_amount_price = parseInt(room_price) + parseInt(tax_price);
     document.getElementById("total_amount_price").innerHTML = total_amount_price;
 });
-
