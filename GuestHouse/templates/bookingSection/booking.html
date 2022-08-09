@@ -14,6 +14,7 @@
 <!-- Booking Page -->
 <div id="booking-page" class="container my-5">
     <div class="booking-page-wrapper mt-5">
+        <h4 class="mb-4">BOOKING</h4>
         <form action="{% url 'ConfirmBookingPage' %}" autocomplete="off" onsubmit="return bookingValidations()">
             {% csrf_token %}
             <section class="form-details-section">

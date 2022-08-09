@@ -422,7 +422,7 @@ html {
     margin-left: 1rem;
 }
 
-.booking-page-wrapper h4 {
+#booking-page h4 {
     color: royalblue;
 }
 
@@ -448,6 +448,22 @@ html {
 #booking-page .form-control:hover,
 #booking-page .form-select:hover {
     box-shadow: 0px 0px 8px 0px royalblue;
+}
+
+#booking-page .otp-page {
+    margin: 15% 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#booking-page .otp-page form{
+    width: 45%;
+}
+
+#booking-page .otp-page input[type=submit]{
+    width: 100%;
 }
 
 /* ----- Authentication Page ----- */

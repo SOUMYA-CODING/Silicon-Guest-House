@@ -1,4 +1,4 @@
-{% extends "base/authenticationbase.html" %}
+{% extends "base/bookingbase.html" %}
 
 <!-- Load Static -->
 {% load static %}
@@ -11,28 +11,32 @@
 <!-- Body -->
 {% block content %}
 
-<div class="authentication-wrapper">
-    <form action="" autocomplete="off" method="post">
-        {% csrf_token %}
-        <div>
-            <span>
-                {% if messages %}
-                {% for message in messages %}
-                <p class="{{message.tags}}">{{message}}</p>
-                {% endfor %}
-                {% endif %}
-            </span>
-        </div>
-        <div class="mb-3">
-            <label for="otp" class="form-label">A OTP is send to your email id </label>
-            <input type="number" class="form-control" id="otp" name="otp" placeholder="Please enter otp">
-            <span id="otp_error" class="error_message"></span>
-        </div>
+<!-- OTP Page -->
+<div id="booking-page" class="container my-5">
+    <section class="otp-page">
+        <h4 class="mb-5">OTP VERIFICATION</h4>
+        <form action="{% url 'OTPValidation' %}" autocomplete="off" method="post">
+            {% csrf_token %}
+            <div>
+                <span>
+                    {% if messages %}
+                    {% for message in messages %}
+                    <p class="{{message.tags}}">{{message}}</p>
+                    {% endfor %}
+                    {% endif %}
+                </span>
+            </div>
+            <div class="mb-3">
+                <label for="otp" class="form-label">A OTP is send to your email id </label>
+                <input type="number" class="form-control" id="otp" name="otp" placeholder="Please enter otp">
+                <span id="otp_error" class="error_message"></span>
+            </div>
 
-        <div class="btn-submit">
-            <button class="btn">Verify</button>
-        </div>
-    </form>
+            <div class="btn-submit">
+                <input type="submit" class="btn btn-primary" value="Verify">
+            </div>
+        </form>
+    </section>
 </div>
 
 {% endblock content %}

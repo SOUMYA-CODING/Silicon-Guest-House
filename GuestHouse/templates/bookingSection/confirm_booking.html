@@ -1,4 +1,4 @@
-{% extends "base/userbase.html" %}
+{% extends "base/bookingbase.html" %}
 
 <!-- Load Static -->
 {% load static %}
@@ -11,11 +11,9 @@
 <!-- Body -->
 {% block content %}
 
-<!-- Booking Page -->
+<!-- Confirm Booking Page -->
 <div id="booking-page" class="container my-5">
-    <a href=" {% url 'HomePage' %} "><img src="https://silicon.ac.in/wp-content/themes/sit/assets/img/sit-logo.svg"
-            alt=""></a>
-    <h4 class="mt-5 text-primary">CONFIRM YOUR BOOKING DETAILS</h4>
+    <h4 class="mb-5">CONFIRM YOUR BOOKING DETAILS</h4>
     <div class="confirm-booking-page-wrapper mt-5">
         <form method="post" action="{% url 'ConfirmBookingPage' %} ">
             {% csrf_token %}

@@ -1,3 +1,4 @@
+from multiprocessing import context
 from random import randint
 from django.shortcuts import render, redirect
 from . models import Booking
@@ -54,7 +55,6 @@ def OTPPage(request):
     print(userdata)
     useremail = userdata.get("email")
     print("e9mail = ", useremail)
-    '''
     if not request.session.get("OTP"):
         otp = randint(111111, 999999)
         send_mail(
@@ -64,15 +64,36 @@ def OTPPage(request):
             [useremail, ],
             fail_silently=False,
         )
-        request.session["OTP"] = otp'''
+        request.session["OTP"] = otp
+        viewotp = request.session.get('OTP')
+        print("OTp = ", viewotp)
     return render(request, 'bookingSection/otp.html')
 
 
 # OTP Validation
 def OTPValidation(request):
-    return render(request, 'HomePage')
+    if request.method == "POST":
+        otp = request.POST.get("otp")
+
+        if request.session.get("OTP") != int(otp):
+            messages.error(request, "Invalid OTP")
+            return redirect("OTPPage")
+        else:
+            bookingDetails = request.session.get("details")
+            if bookingDetails:
+                book = Booking(check_in=bookingDetails.get("check_in"), check_out=bookingDetails.get("check_out"), total_days=bookingDetails.get("total_days"), total_peoples=bookingDetails.get("total_peoples"), room_type=bookingDetails.get("room_type"),
+                               total_rooms=bookingDetails.get("total_rooms"), full_name=bookingDetails.get("full_name"), email=bookingDetails.get("email"), phone_number=bookingDetails.get("phone_number"), address=bookingDetails.get("address"), total_amount=bookingDetails.get("total_amount"))
+                book.save()
+
+                del request.session["details"]
+                del request.session["OTP"]
+    return redirect('HomePage')
 
 
 # My Booking History Page
 def BookingHistory(request):
-    return render(request, 'bookingSection/booking_history.html')
+    booked = Booking.objects.all()
+    context = {
+        "bookingDetails": booked,
+    }
+    return render(request, 'bookingSection/booking_history.html', context)
