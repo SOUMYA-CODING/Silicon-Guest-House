@@ -49,6 +49,8 @@ def ConfirmBookingPage(request):
 # OTP Page
 def OTPPage(request):
     useremail = request.session.get('email')
+    print(useremail)
+    '''
     if not request.session.get("OTP"):
         otp = randint(111111, 999999)
         send_mail(
@@ -58,7 +60,7 @@ def OTPPage(request):
             [useremail, ],
             fail_silently=False,
         )
-        request.session["OTP"] = otp
+        request.session["OTP"] = otp'''
     return render(request, 'bookingSection/otp.html')
 
 
