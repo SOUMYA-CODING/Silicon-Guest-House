@@ -21,14 +21,14 @@ def LoginPage(request):
 
         user = authenticate(request, username=username, password=password)
 
-        if user.is_superuser:
-            return redirect('AdminDashboardPage')
-        else:
-            if user is not None:
-                login(request, user)
-                return redirect('HomePage')
+        if user is not None:
+            login(request, user)
+            if user.is_superuser:
+                return redirect('AdminDashboardPage')
             else:
-                messages.error(request, "Invalid username or password")
+                return redirect('HomePage')
+        else:
+            messages.error(request, "Invalid username or password")
 
     return render(request, 'authentication/login.html')
 

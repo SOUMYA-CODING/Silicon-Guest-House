@@ -40,16 +40,20 @@ def ConfirmBookingPage(request):
             'address': address,
             'total_amount': total_amount,
         }
+        print("Details", details)
         request.session['details'] = details
         deta = request.session.get('details')
         print(deta)
+        return redirect('OTPPage')
     return render(request, 'bookingSection/confirm_booking.html')
 
 
 # OTP Page
 def OTPPage(request):
-    useremail = request.session.get('email')
-    print("email = ",useremail)
+    userdata = request.session.get('details')
+    print(userdata)
+    useremail = userdata.get("email")
+    print("e9mail = ", useremail)
     '''
     if not request.session.get("OTP"):
         otp = randint(111111, 999999)
