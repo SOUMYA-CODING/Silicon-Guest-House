@@ -32,7 +32,7 @@
             <div class="card-body">
                 <i class="fa-solid fa-bed"></i>
                 <section>
-                    <h4 class="count">7</h4>
+                    <h4 class="count">{{totalBooking}}</h4>
                     <p>Total Rooms Booked</p>
                 </section>
             </div>
@@ -41,80 +41,61 @@
             <div class="card-body">
                 <i class="fa-solid fa-money-bill"></i>
                 <section>
-                    <h4 class="count">Rs 4500</h4>
+                    <h4 class="count">{{total_amount}}</h4>
                     <p>Total Income</p>
                 </section>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-md-8">
-            <section class="recent-rooms-booking mb-4">
-                <h5>Recent Rooms Booking</h5>
-                <table class="table">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Name</th>
-                            <th>Total People</th>
-                            <th>Room Type</th>
-                            <th>No. of Rooms</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th>Random</th>
-                            <th>4</th>
-                            <th>Double Bed Room</th>
-                            <th>2</th>
-                            <td><a href="" class="btn btn-primary">View</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+    <div>
+        <section class="recent-rooms-booking mb-4">
+            <h5>Recent Rooms Booking</h5>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Check In</th>
+                        <th>Days</th>
+                        <th>Room Type</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for bookingDetails in booking %}
+                    <tr>
+                        <th>{{bookingDetails.full_name}}</th>
+                        <th>{{bookingDetails.check_in}}</th>
+                        <th>{{bookingDetails.total_days}}</th>
+                        <th>{{bookingDetails.room_type}}</th>
+                        <td><a href="" class="btn btn-primary">View</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
 
-            <section class="recent-user">
-                <h5>Recent Users</h5>
-                <table class="table">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>SIC No.</th>
-                            <th>Email Address</th>
-                            <th>User ID</th>    
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for userList in users %}
-                        <tr>
-                            <th>{{userList.username}}</th>
-                            <th>{{userList.email}}</th>
-                            <th>{{userList.id}}</th>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                </table>
-            </section>
-        </div>
-        <div class="col">
-            <section class="messages-section">
-                <h5>Messages</h5>
-                <table class="table">
-                    <thead class="table-dark">
-                        <tr>
-                            <th>Name</th>
-                            <th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Ramdom</td>
-                            <td><a href="" class="btn btn-primary">View</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-        </div>
+        <section class="recent-user">
+            <h5>Recent Users</h5>
+            <table class="table">
+                <thead class="table-dark">
+                    <tr>
+                        <th>SIC No.</th>
+                        <th>Email Address</th>
+                        <th>User ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for userList in users %}
+                    <tr>
+                        <th>{{userList.username}}</th>
+                        <th>{{userList.email}}</th>
+                        <th>{{userList.id}}</th>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
     </div>
 </div>
 
