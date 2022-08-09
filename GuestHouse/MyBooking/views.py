@@ -49,7 +49,7 @@ def ConfirmBookingPage(request):
 # OTP Page
 def OTPPage(request):
     useremail = request.session.get('email')
-    print(useremail)
+    print("email = ",useremail)
     '''
     if not request.session.get("OTP"):
         otp = randint(111111, 999999)

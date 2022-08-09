@@ -18,6 +18,7 @@
 
     <div class="booking-page-wrapper mt-5">
         <form action="{% url 'ConfirmBookingPage' %}" autocomplete="off" onsubmit="return bookingValidations()">
+            {% csrf_token %}
             <section class="form-details-section">
                 <div class="row mb-3">
                     <h4>STAYING DETAILS</h4>
