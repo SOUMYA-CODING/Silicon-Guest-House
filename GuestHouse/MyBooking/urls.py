@@ -6,4 +6,5 @@ urlpatterns = [
     path('ConfirmBookingPage', views.ConfirmBookingPage, name='ConfirmBookingPage'),
     path('OTPPage', views.OTPPage, name='OTPPage'),
     path('OTPValidation', views.OTPValidation, name='OTPValidation'),
+    path('BookingHistory', views.BookingHistory, name='BookingHistory'),
 ]

@@ -1,4 +1,4 @@
-{% extends "base/userbase.html" %}
+{% extends "base/bookingbase.html" %}
 
 <!-- Load Static -->
 {% load static %}
@@ -13,9 +13,6 @@
 
 <!-- Booking Page -->
 <div id="booking-page" class="container my-5">
-    <a href=" {% url 'HomePage' %} "><img src="https://silicon.ac.in/wp-content/themes/sit/assets/img/sit-logo.svg"
-            alt=""></a>
-
     <div class="booking-page-wrapper mt-5">
         <form action="{% url 'ConfirmBookingPage' %}" autocomplete="off" onsubmit="return bookingValidations()">
             {% csrf_token %}

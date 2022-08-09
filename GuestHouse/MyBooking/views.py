@@ -71,3 +71,8 @@ def OTPPage(request):
 # OTP Validation
 def OTPValidation(request):
     return render(request, 'HomePage')
+
+
+# My Booking History Page
+def BookingHistory(request):
+    return render(request, 'bookingSection/booking_history.html')
