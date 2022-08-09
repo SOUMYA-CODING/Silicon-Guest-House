@@ -120,9 +120,14 @@
                         </section>
                         <hr>
                         <div class="d-flex justify-content-end">
+                            {% if user.is_authenticated %}
                             <button class="btn btn-primary m-1">Procced</button>
                             <a href=" {% url 'HomePage' %} " class="btn btn-danger m-1">
                                 Cancle</a>
+                            {% else %}
+                            <a href=" {% url 'LoginPage' %} " class="btn btn-danger m-1">
+                                Login to continue</a>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

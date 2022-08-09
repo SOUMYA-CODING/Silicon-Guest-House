@@ -1,0 +1,66 @@
+{% extends "base/bookingbase.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Silicon Guest House | Booking History</title>
+{% endblock title %}
+
+<!-- Body -->
+{% block content %}
+
+<!-- Booking Page -->
+<div id="booking-page" class="container my-5">
+    <div class="booking-page-wrapper mt-5">
+        <h4 class="mb-4">BOOKING HISTORY</h4>
+
+        {% for history in bookingDetails %}
+        <div class="card boking-history-card mb-3">
+            <div class="card-body">
+                <section class="details">
+                    <p>Booked On:  <span>{{history.created_at}}</span></p>
+                    <p>Booking ID: <span>{{history.id}}</span></p>
+                </section>
+                <hr>
+                <section class="details">
+                    <p>Check-In Date <br><span>{{history.check_in}}</span></p>
+                    <p>Days <br><span>{{history.total_days}}</span></p>
+                    <p>Check-Out Date <br><span>{{history.check_out}}</span></p>
+                </section>
+                <section class="details">
+                    <p>Room Type <br><span>{{history.room_type}}</span></p>
+                    <p>Rooms <br><span>{{history.total_rooms}}</span></p>
+                    <p>Total Amout <br><span>Rs {{history.total_amount}} /-</span></p>
+                </section>
+                
+                <!--
+                <section class="d-flex justify-content-end">
+                    <a data-bs-toggle="#modal" data-bs-target="#data" class="btn btn-primary" href="{% url 'ViewDetails' history.id %}">View Details</a>
+                </section>
+                -->
+            </div>
+        </div>
+        {% endfor %}
+
+        <!-- Modal
+        {% for historydetails in details %}
+        <div class="modal fade" id="data" tabindex="-1" aria-labelledby="modellabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modellabel">{{historydetails.id}}</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %} -->
+    </div>
+</div>
+
+{% endblock content %}

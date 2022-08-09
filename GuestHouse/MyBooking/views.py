@@ -92,8 +92,17 @@ def OTPValidation(request):
 
 # My Booking History Page
 def BookingHistory(request):
-    booked = Booking.objects.all()
+    booked = Booking.objects.all().order_by('-id')
     context = {
         "bookingDetails": booked,
+    }
+    return render(request, 'bookingSection/booking_history.html', context)
+
+
+# View Details
+def ViewDetails(request, id):
+    details = Booking.objects.all().filter(id=id)
+    context = {
+        'details': details,
     }
     return render(request, 'bookingSection/booking_history.html', context)

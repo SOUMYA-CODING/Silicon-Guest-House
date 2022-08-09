@@ -458,12 +458,25 @@ html {
     flex-direction: column;
 }
 
-#booking-page .otp-page form{
+#booking-page .otp-page form {
     width: 45%;
 }
 
-#booking-page .otp-page input[type=submit]{
+#booking-page .otp-page input[type=submit] {
     width: 100%;
+}
+
+.boking-history-card {
+    width: 55%;
+}
+
+.boking-history-card span {
+    color: #034694;
+}
+
+.boking-history-card .details {
+    display: flex;
+    justify-content: space-between;
 }
 
 /* ----- Authentication Page ----- */
