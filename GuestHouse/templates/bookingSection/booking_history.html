@@ -15,7 +15,7 @@
 <div id="booking-page" class="container my-5">
     <div class="booking-page-wrapper mt-5">
         <h4 class="mb-4">BOOKING HISTORY</h4>
-
+        {% if bookingDetails %}
         {% for history in bookingDetails %}
         <div class="card boking-history-card mb-3">
             <div class="card-body">
@@ -43,15 +43,14 @@
                 </section>
                 <div class="collapse mt-3" id="data-{{history.id}}">
                     <div class="">
-                        <section class="details">
+                        <section>
                             <p>Name : <span>{{history.full_name}}</span></p>
                             <p>Phone Number : <span>{{history.phone_number}}</span></p>
-                        </section>
-                        <section class="details">
                             <p>email : <span>{{history.email}}</span></p>
                             <p>Address : <span>{{history.address}}</span></p>
                         </section>
-                        <section class="details">
+                        <hr>
+                        <section class="mt-2">
                             <p>Total People : <span>{{history.total_peoples}}</span></p>
                         </section>
                     </div>
@@ -59,6 +58,10 @@
             </div>
         </div>
         {% endfor %}
+        {% else %}
+        <h6 class="text-danger mb-3">No Booking Yet</h6>
+        <a href="{% url 'BookingPage' %}" class="btn btn-primary">Book a Room</a>
+        {% endif %}
     </div>
 </div>
 

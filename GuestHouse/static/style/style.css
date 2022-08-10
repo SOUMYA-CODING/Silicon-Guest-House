@@ -589,6 +589,7 @@ html {
 .dashboard-page .counters-display .card {
     width: 350px;
     margin: 10px;
+    cursor: pointer;
 }
 
 .dashboard-page .counters-display .card:nth-child(1) {

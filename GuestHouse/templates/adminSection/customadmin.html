@@ -41,7 +41,7 @@
             <div class="card-body">
                 <i class="fa-solid fa-money-bill"></i>
                 <section>
-                    <h4 class="count">{{total_amount}}</h4>
+                    <h4 class="count">Rs {{total_amount}}</h4>
                     <p>Total Income</p>
                 </section>
             </div>
@@ -54,23 +54,37 @@
             <table class="table">
                 <thead class="table-dark">
                     <tr>
-                        <th>Name</th>
+                        <th>Booking ID</th>
+                        <th>Full Name</th>
                         <th>Check In</th>
+                        <th>Check Out</th>
                         <th>Days</th>
                         <th>Room Type</th>
+                        <th>Rooms</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% if booking %}
                     {% for bookingDetails in booking %}
                     <tr>
-                        <th>{{bookingDetails.full_name}}</th>
-                        <th>{{bookingDetails.check_in}}</th>
-                        <th>{{bookingDetails.total_days}}</th>
-                        <th>{{bookingDetails.room_type}}</th>
+                        <td>{{bookingDetails.id}}</td>
+                        <td>{{bookingDetails.full_name}}</td>
+                        <td>{{bookingDetails.check_in}}</td>
+                        <td>{{bookingDetails.check_out}}</td>
+                        <td>{{bookingDetails.total_days}}</td>
+                        <td>{{bookingDetails.room_type}}</td>
+                        <td>{{bookingDetails.total_rooms}}</td>
                         <td><a href="" class="btn btn-primary">View</a></td>
                     </tr>
                     {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td class="text-center text-danger">
+                            <p>No Data</p>
+                        </td>
+                    </tr>
+                    {% endif %}
                 </tbody>
             </table>
         </section>
@@ -80,19 +94,33 @@
             <table class="table">
                 <thead class="table-dark">
                     <tr>
-                        <th>SIC No.</th>
-                        <th>Email Address</th>
                         <th>User ID</th>
+                        <th>SIC No.</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email Address</th>
+                        <th></th>
                     </tr>
                 </thead>
                 <tbody>
+                    {% if users %}
                     {% for userList in users %}
                     <tr>
-                        <th>{{userList.username}}</th>
-                        <th>{{userList.email}}</th>
                         <th>{{userList.id}}</th>
+                        <th>{{userList.username}}</th>
+                        <th>{{userList.first_name}}</th>
+                        <th>{{userList.last_name}}</th>
+                        <th>{{userList.email}}</th>
+                        <td><a href="" class="btn btn-primary">View</a></td>
                     </tr>
                     {% endfor %}
+                    {% else %}
+                    <tr>
+                        <td class="text-center text-danger">
+                            <p>No Data</p>
+                        </td>
+                    </tr>
+                    {% endif %}
                 </tbody>
             </table>
         </section>
