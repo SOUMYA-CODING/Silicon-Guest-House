@@ -25,3 +25,8 @@ def AdminDashboardPage(request):
 # User Details Page
 def UserDetailsPage(request):
     return render(request, 'adminSection/userdetails.html')
+
+
+# Booking Details Page
+def BookingDetailsPage(request):
+    return render(request, 'adminSection/bookingdetails.html')
