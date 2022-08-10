@@ -20,46 +20,45 @@
         <div class="card boking-history-card mb-3">
             <div class="card-body">
                 <section class="details">
-                    <p>Booked On:  <span>{{history.created_at}}</span></p>
-                    <p>Booking ID: <span>{{history.id}}</span></p>
+                    <p>Booked On : <span>{{history.created_at}}</span></p>
+                    <p>Booking ID : <span>{{history.id}}</span></p>
                 </section>
                 <hr>
                 <section class="details">
-                    <p>Check-In Date <br><span>{{history.check_in}}</span></p>
-                    <p>Days <br><span>{{history.total_days}}</span></p>
-                    <p>Check-Out Date <br><span>{{history.check_out}}</span></p>
+                    <p>Check-In Date : <span>{{history.check_in}}</span></p>
+                    <p>Days : <span>{{history.total_days}}</span></p>
+                    <p>Check-Out Date : <span>{{history.check_out}}</span></p>
                 </section>
                 <section class="details">
-                    <p>Room Type <br><span>{{history.room_type}}</span></p>
-                    <p>Rooms <br><span>{{history.total_rooms}}</span></p>
-                    <p>Total Amout <br><span>Rs {{history.total_amount}} /-</span></p>
+                    <p>Room Type : <span>{{history.room_type}}</span></p>
+                    <p>Rooms : <span>{{history.total_rooms}}</span></p>
+                    <p>Total Amout : <span>Rs {{history.total_amount}} /-</span></p>
                 </section>
-                
-                <!--
+                <hr>
                 <section class="d-flex justify-content-end">
-                    <a data-bs-toggle="#modal" data-bs-target="#data" class="btn btn-primary" href="{% url 'ViewDetails' history.id %}">View Details</a>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#data-{{history.id}}" aria-expanded="false" aria-controls="data-{{history.id}}">
+                        View Details
+                    </button>
                 </section>
-                -->
-            </div>
-        </div>
-        {% endfor %}
-
-        <!-- Modal
-        {% for historydetails in details %}
-        <div class="modal fade" id="data" tabindex="-1" aria-labelledby="modellabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="modellabel">{{historydetails.id}}</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-
+                <div class="collapse mt-3" id="data-{{history.id}}">
+                    <div class="">
+                        <section class="details">
+                            <p>Name : <span>{{history.full_name}}</span></p>
+                            <p>Phone Number : <span>{{history.phone_number}}</span></p>
+                        </section>
+                        <section class="details">
+                            <p>email : <span>{{history.email}}</span></p>
+                            <p>Address : <span>{{history.address}}</span></p>
+                        </section>
+                        <section class="details">
+                            <p>Total People : <span>{{history.total_peoples}}</span></p>
+                        </section>
                     </div>
                 </div>
             </div>
         </div>
-        {% endfor %} -->
+        {% endfor %}
     </div>
 </div>
 
