@@ -207,7 +207,7 @@
                             </section>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-print"></i> &nbsp;
+                            <button type="button" id="btnPrint" class="btn btn-primary"><i class="fa-solid fa-print"></i> &nbsp;
                                 Print</button>
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         </div>
@@ -223,4 +223,5 @@
 <!-- Script -->
 {% block script %}
 <script src=" {% static 'script/search.js' %}"></script>
+<script src=" {% static 'script/print.js' %}"></script>
 {% endblock script %}
