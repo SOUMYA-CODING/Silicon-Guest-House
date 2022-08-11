@@ -1,0 +1,29 @@
+{% extends "base/adminbase.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Silicon Guest House | Booking Details</title>
+{% endblock title %}
+
+<!-- Page Title -->
+{% block navbrand %}
+<a class="navbar-brand" href="#">Booking</a>
+{% endblock navbrand %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- User Details Page -->
+<div class="user-page">
+    <p>{{details.id}}</p>
+</div>
+
+{% endblock content %}
+
+<!-- Script -->
+{% block script %}
+<script src=" {% static 'script/search.js' %}"></script>
+{% endblock script %}

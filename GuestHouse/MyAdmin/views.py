@@ -45,3 +45,12 @@ def BookingDetailsPage(request):
 # User Data Upload
 def UserDataUpload(request):
     return render(request, 'adminsection/userdataupload.html')
+
+
+# User Booking Details
+def UserBookigDetails(request, id):
+    details = Booking.objects.get(id=id)
+    context = {
+        'details': details,
+    }
+    return render(request, 'adminsection/userbookingdetails.html', context)

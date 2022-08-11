@@ -17,11 +17,10 @@
 {% block content %}
 
 <!-- User Details Page -->
-<div class="user-page">
-    <section class="d-flex justify-content-between">
-        <input type="search" placeholder="Search for SIC, Name, Email.." class="form-control m-1 search-input"
+<div class="booking-page">
+    <section>
+        <input type="search" placeholder="Search for ID, SIC, Name.." class="form-control search-input"
             id="searchInput" name="search" autocomplete="off" data-table="users-list">
-        <a href="{% url 'UserDataUpload' %}" class="btn btn-primary m-1">User File</a>
     </section>
     <hr>
     <table class="table users-list">
@@ -29,7 +28,7 @@
             <tr>
                 <th>Booking ID</th>
                 <th>Full Name</th>
-                <th>Check In</th>
+                <th>SIC</th>
                 <th>Check Out</th>
                 <th>Days</th>
                 <th>Room Type</th>
@@ -42,12 +41,12 @@
             <tr>
                 <td>{{booking_list.id}}</td>
                 <td>{{booking_list.full_name}}</td>
+                <td>{{booking_list.user_username}}</td>
                 <td>{{booking_list.check_in}}</td>
-                <td>{{booking_list.check_out}}</td>
                 <td>{{booking_list.total_days}}</td>
                 <td>{{booking_list.room_type}}</td>
                 <td>{{booking_list.total_rooms}}</td>
-                <td><a href="" class="btn btn-primary">View</a></td>
+                <td><a href="{% url 'UserBookigDetails' booking_list.id %}" class="btn btn-primary">View</a></td>
             </tr>
             {% endfor %}
         </tbody>

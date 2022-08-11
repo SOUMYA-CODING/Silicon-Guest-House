@@ -6,4 +6,5 @@ urlpatterns = [
     path('userDetails/', views.UserDetailsPage, name='UserDetailsPage'),
     path('bookingDetails/', views.BookingDetailsPage, name='BookingDetailsPage'),
     path('userDataUpload/', views.UserDataUpload, name='UserDataUpload'),
+    path('userBookigDetails/<int:id>/', views.UserBookigDetails, name='UserBookigDetails'),
 ]
