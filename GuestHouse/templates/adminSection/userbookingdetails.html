@@ -17,8 +17,205 @@
 {% block content %}
 
 <!-- User Details Page -->
-<div class="user-page">
-    <p>{{details.id}}</p>
+<div class="booking-page">
+    <h4 class="mb-3">User Booking Details</h4>
+    <div class="first-div">
+        <section class="d-flex mb-3">
+            <div class="m-1">
+                <label for="user-id" class="form-label">Booking ID</label>
+                <input type="text" class="form-control" id="user-id" value="{{details.id}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="user-username" class="form-label">SIC Number</label>
+                <input type="text" class="form-control" id="user-username" value="{{details.user_username}}" readonly>
+            </div>
+        </section>
+        <section class="d-flex mb-3">
+            <div class="m-1">
+                <label for="user-name" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="user-name" value="{{details.full_name}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="user-email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="user-email" value="{{details.email}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="user-phone-number" class="form-label">Phone Number</label>
+                <input type="text" class="form-control" id="user-phone-number" value="{{details.phone_number}}"
+                    readonly>
+            </div>
+            <div class="m-1">
+                <label for="user-phone-number" class="form-label">Address</label>
+                <input type="text" class="form-control" id="user-phone-number" value="{{details.address}}" readonly>
+            </div>
+        </section>
+        <section class="d-flex mb-3">
+            <div class="m-1">
+                <label for="booked-on" class="form-label">Booked On</label>
+                <input type="text" class="form-control" id="booked-on" value="{{details.created_at}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="total-people" class="form-label">Total People</label>
+                <input type="text" class="form-control" id="total-people" value="{{details.total_peoples}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="room-type" class="form-label">Room Type</label>
+                <input type="text" class="form-control" id="room-type" value="{{details.room_type}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="total-rooms" class="form-label">Total Rooms</label>
+                <input type="text" class="form-control" id="total-rooms" value="{{details.total_rooms}}" readonly>
+            </div>
+        </section>
+        <section class="d-flex mb-3">
+            <div class="m-1">
+                <label for="check-in" class="form-label">Check In</label>
+                <input type="text" class="form-control" id="check-in" value="{{details.check_in}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="check-out" class="form-label">Check Out</label>
+                <input type="text" class="form-control" id="check-out" value="{{details.check_out}}" readonly>
+            </div>
+            <div class="m-1">
+                <label for="total-days" class="form-label">Total Days</label>
+                <input type="text" class="form-control" id="total-days" value="{{details.total_days}}" readonly>
+            </div>
+        </section>
+        <section class="d-flex mb-3">
+            <div class="m-1">
+                <label for="check-in" class="form-label">Total Cost</label>
+                <input type="text" class="form-control" id="check-in" value="{{details.total_amount}}" readonly>
+            </div>
+        </section>
+    </div>
+    <div class="second-div">
+        <section>
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Check Out
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-xl">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Receipt</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <section class="d-flex mb-3">
+                                <div class="m-1">
+                                    <label for="user-id" class="form-label">Booking ID</label>
+                                    <input type="text" class="form-control" id="user-id" value="{{details.id}}"
+                                        readonly>
+                                </div>
+                                <div class="m-1">
+                                    <label for="user-username" class="form-label">SIC Number</label>
+                                    <input type="text" class="form-control" id="user-username"
+                                        value="{{details.user_username}}" readonly>
+                                </div>
+                            </section>
+                            <section class="d-flex mb-3">
+                                <div class="m-1">
+                                    <label for="user-name" class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" id="user-name" value="{{details.full_name}}"
+                                        readonly>
+                                </div>
+                                <div class="m-1">
+                                    <label for="user-email" class="form-label">Email</label>
+                                    <input type="text" class="form-control" id="user-email" value="{{details.email}}"
+                                        readonly>
+                                </div>
+                                <div class="m-1">
+                                    <label for="user-phone-number" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="user-phone-number"
+                                        value="{{details.phone_number}}" readonly>
+                                </div>
+                                <div class="m-1">
+                                    <label for="user-phone-number" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="user-phone-number"
+                                        value="{{details.address}}" readonly>
+                                </div>
+                            </section>
+                            <section class="d-flex mb-3">
+                                <div class="m-1">
+                                    <label for="booked-on" class="form-label">Booked On</label>
+                                    <input type="datetime" class="form-control" id="booked-on"
+                                        value="{{details.created_at}}" readonly>
+                                </div>
+                                <div class="m-1">
+                                    <label for="total-people" class="form-label">Total People</label>
+                                    <input type="text" class="form-control" id="total-people"
+                                        value="{{details.total_peoples}}">
+                                </div>
+                                <div class="m-1">
+                                    <label for="room-type" class="form-label">Room Type</label>
+                                    <input type="text" class="form-control" id="room-type"
+                                        value="{{details.room_type}}">
+                                </div>
+                                <div class="m-1">
+                                    <label for="total-rooms" class="form-label">Total Rooms</label>
+                                    <input type="text" class="form-control" id="total-rooms"
+                                        value="{{details.total_rooms}}">
+                                </div>
+                            </section>
+                            <section class="d-flex mb-3">
+                                <div class="m-1">
+                                    <label for="check-in" class="form-label">Check In</label>
+                                    <input type="text" class="form-control" id="check-in" value="{{details.check_in}}">
+                                </div>
+                                <div class="m-1">
+                                    <label for="check-out" class="form-label">Check Out</label>
+                                    <input type="text" class="form-control" id="check-out"
+                                        value="{{details.check_out}}">
+                                </div>
+                                <div class="m-1">
+                                    <label for="total-days" class="form-label">Total Days</label>
+                                    <input type="text" class="form-control" id="total-days"
+                                        value="{{details.total_days}}">
+                                </div>
+                            </section>
+                            <section class="d-flex mb-3">
+                                <div class="m-1">
+                                    <label for="check-in" class="form-label">Total Cost</label>
+                                    <input type="text" class="form-control" id="check-in"
+                                        value="{{details.total_amount}}">
+                                </div>
+                            </section>
+                            <hr>
+                            <section class="d-flex">
+                                <div class="m-1">
+                                    <label for="check-in" class="form-label">Check In Date Time</label>
+                                    <input type="datetime-local" class="form-control" id="check-in">
+                                </div>
+                                <div class="m-1">
+                                    <label for="check-in" class="form-label">Check Out Date Time</label>
+                                    <input type="datetime-local" class="form-control" id="check-in">
+                                </div>
+                                <div class="m-1">
+                                    <label for="room_type" class="form-label">Mode Of Payment</label>
+                                    <select id="room_type" class="form-select" name="room_type">
+                                        <option value="">Select Payment Type</option>
+                                        <option value="AC Room">Cash</option>
+                                        <option value="NON AC ROOM">Debit Card</option>
+                                        <option value="Deluxe Room">Credit Card</option>
+                                        <option value="Deluxe Room">UPI</option>
+                                    </select>
+                                </div>
+                            </section>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary"><i class="fa-solid fa-print"></i> &nbsp;
+                                Print</button>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </div>
 
 {% endblock content %}
