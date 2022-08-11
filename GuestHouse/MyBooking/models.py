@@ -1,9 +1,10 @@
-from tabnanny import check
 from django.db import models
+from django.contrib.auth.models import User
 
 
 # Booking Model
 class Booking(models.Model):
+    username = models.ForeignKey(User, on_delete=models.DO_NOTHING)
     check_in = models.DateField()
     check_out = models.DateField()
     total_days = models.IntegerField()

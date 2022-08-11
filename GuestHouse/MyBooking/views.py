@@ -91,8 +91,8 @@ def OTPValidation(request):
 
 
 # My Booking History Page
-def BookingHistory(request):
-    booked = Booking.objects.all().order_by('-id')
+def BookingHistory(request, username):
+    booked = Booking.objects.all().filter(username=username).order_by('-id')
     context = {
         "bookingDetails": booked,
     }
