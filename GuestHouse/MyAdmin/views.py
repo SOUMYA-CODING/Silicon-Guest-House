@@ -1,3 +1,4 @@
+from multiprocessing import context
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from MyBooking.models import Booking
@@ -26,7 +27,11 @@ def AdminDashboardPage(request):
 
 # User Details Page
 def UserDetailsPage(request):
-    return render(request, 'adminSection/userdetails.html')
+    users = User.objects.all().filter(is_superuser=0).order_by('-id')
+    context = {
+        'users': users,
+    }
+    return render(request, 'adminSection/userdetails.html', context)
 
 
 # Booking Details Page
