@@ -1,0 +1,52 @@
+{% extends "base/adminbase.html" %}
+
+<!-- Load Static -->
+{% load static %}
+
+<!-- Enter Title -->
+{% block title %}
+<title>Silicon Guest House | User Details</title>
+{% endblock title %}
+
+<!-- Page Title -->
+{% block navbrand %}
+<a class="navbar-brand" href="#">User</a>
+{% endblock navbrand %}
+
+<!-- Content -->
+{% block content %}
+
+<!-- User Details Page -->
+<div class="user-page">
+    <section class="d-flex justify-content-between">
+        <input type="file" class="form-control m-1" placeholder="File" id="excel_file">
+        <button class="btn btn-primary m-1">Upload</button>
+    </section>
+    <hr>
+
+    <div class="excel_data_base">
+        <table class="table users-list">
+            <thead class="table-dark">
+                <tr>
+                    <th>User ID</th>
+                    <th>SIC Number</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email</th>
+                    <th>Created On</th>
+                </tr>
+            </thead>
+            <tbody id="excel_data">
+
+            </tbody>
+        </table>
+    </div>
+</div>
+
+{% endblock content %}
+
+<!-- Script -->
+{% block script %}
+<script type="text/javascript" src="https://unpkg.com/xlsx@0.15.1/dist/xlsx.full.min.js"></script>
+<script src=" {% static 'script/exceltohtml.js' %}"></script>
+{% endblock script %}

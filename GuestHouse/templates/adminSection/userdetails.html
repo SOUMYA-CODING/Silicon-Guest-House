@@ -20,11 +20,11 @@
 <div class="user-page">
     <section class="d-flex justify-content-between">
         <section class="d-flex">
-            <input type="search" placeholder="Search from SIC, Name, Email.." class="form-control m-1 search-input" id="searchInput" name="search"
-                autocomplete="off" data-table="users-list">
+            <input type="search" placeholder="Search for SIC, Name, Email.." class="form-control m-1 search-input"
+                id="searchInput" name="search" autocomplete="off" data-table="users-list">
         </section>
         <section>
-            <a href="" class="btn btn-primary m-1">User File</a>
+            <a href="{% url 'UserDataUpload' %}" class="btn btn-primary m-1">User File</a>
         </section>
     </section>
     <hr>

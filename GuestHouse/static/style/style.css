@@ -649,3 +649,13 @@ html {
     position: sticky;
     top: 0;
 }
+
+.user-page .form-control {
+    width: 350px;
+}
+
+.user-page .excel_data_base {
+    width: 100%;
+    height: 600px;
+    overflow: auto;
+}

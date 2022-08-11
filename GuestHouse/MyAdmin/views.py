@@ -37,3 +37,8 @@ def UserDetailsPage(request):
 # Booking Details Page
 def BookingDetailsPage(request):
     return render(request, 'adminSection/bookingdetails.html')
+
+
+# User Data Upload
+def UserDataUpload(request):
+    return render(request, 'adminsection/userdataupload.html')
