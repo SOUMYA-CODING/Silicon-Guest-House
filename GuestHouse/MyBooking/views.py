@@ -1,9 +1,9 @@
-from multiprocessing import context
 from random import randint
 from django.shortcuts import render, redirect
 from . models import Booking
 from django.core.mail import send_mail
 from django.contrib import messages
+from django.contrib.auth.models import User
 
 
 # Booking Page
@@ -13,6 +13,9 @@ def BookingPage(request):
 
 # Confirm Booking Page
 def ConfirmBookingPage(request):
+    # User
+    current_user = request.user
+    print("Current User : ", current_user)
     details = {}
     if request.method == "POST":
         check_in = request.POST.get("Check_in")
@@ -40,11 +43,9 @@ def ConfirmBookingPage(request):
             'phone_number': phone_number,
             'address': address,
             'total_amount': total_amount,
+            'user_username': str(current_user),
         }
-        print("Details", details)
         request.session['details'] = details
-        deta = request.session.get('details')
-        print(deta)
         return redirect('OTPPage')
     return render(request, 'bookingSection/confirm_booking.html')
 
@@ -82,7 +83,7 @@ def OTPValidation(request):
             bookingDetails = request.session.get("details")
             if bookingDetails:
                 book = Booking(check_in=bookingDetails.get("check_in"), check_out=bookingDetails.get("check_out"), total_days=bookingDetails.get("total_days"), total_peoples=bookingDetails.get("total_peoples"), room_type=bookingDetails.get("room_type"),
-                               total_rooms=bookingDetails.get("total_rooms"), full_name=bookingDetails.get("full_name"), email=bookingDetails.get("email"), phone_number=bookingDetails.get("phone_number"), address=bookingDetails.get("address"), total_amount=bookingDetails.get("total_amount"))
+                               total_rooms=bookingDetails.get("total_rooms"), full_name=bookingDetails.get("full_name"), email=bookingDetails.get("email"), phone_number=bookingDetails.get("phone_number"), address=bookingDetails.get("address"), total_amount=bookingDetails.get("total_amount"), user_username=bookingDetails.get("user_username"))
                 book.save()
 
                 del request.session["details"]
@@ -92,17 +93,8 @@ def OTPValidation(request):
 
 # My Booking History Page
 def BookingHistory(request, username):
-    booked = Booking.objects.all().filter(username=username).order_by('-id')
+    booked = Booking.objects.filter(user_username=username)
     context = {
         "bookingDetails": booked,
-    }
-    return render(request, 'bookingSection/booking_history.html', context)
-
-
-# View Details
-def ViewDetails(request, id):
-    details = Booking.objects.all().filter(id=id)
-    context = {
-        'details': details,
     }
     return render(request, 'bookingSection/booking_history.html', context)

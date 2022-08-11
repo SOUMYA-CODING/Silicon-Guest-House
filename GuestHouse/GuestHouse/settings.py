@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-gqduvm7hspjz^aj=ii)c$z@(4s08sh4n5^6kez^of!lvrb0oe5'
+SECRET_KEY = 'django-insecure-@^+mgarf4(1w@st6jbgn1!oo55r=z8!2gg#71f7ts&_dgd#+2h'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -81,7 +81,7 @@ WSGI_APPLICATION = 'GuestHouse.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'guest_house_db',
+        'NAME': 'silicon_guest_house_db',
         'USER': 'root',
         'PASSWORD': '1992',
         'HOST': '127.0.0.1',
@@ -129,12 +129,10 @@ STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
 
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 
 # Email
 EMAIL_HOST = "smtp.gmail.com"

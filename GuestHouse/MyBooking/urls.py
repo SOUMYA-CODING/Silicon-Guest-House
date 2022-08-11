@@ -6,6 +6,5 @@ urlpatterns = [
     path('ConfirmBookingPage', views.ConfirmBookingPage, name='ConfirmBookingPage'),
     path('OTPPage', views.OTPPage, name='OTPPage'),
     path('OTPValidation', views.OTPValidation, name='OTPValidation'),
-    path('BookingHistory/<str:username>', views.BookingHistory, name='BookingHistory'),
-    path('ViewDetails/<int:id>/', views.ViewDetails, name='ViewDetails')
+    path('BookingHistory/<str:username>/', views.BookingHistory, name='BookingHistory'),
 ]
