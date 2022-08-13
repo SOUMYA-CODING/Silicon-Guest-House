@@ -13,10 +13,11 @@ document.getElementById("Check_out").value = check_out_data;
 document.getElementById("Adults").value = adult_data;
 document.getElementById("Childrens").value = children_data;
 
-const Check_in = document.getElementById("Check_out").value;
-const Check_out = document.getElementById("Check_out").value;
-let total_date = Date.parse(Check_out) - Date.parse(Check_in);
-document.getElementById("total_days_label").innerHTML = total_date;
+let data_check_in = document.getElementById("Check_in").value;
+let data_Check_out = document.getElementById("Check_out").value;
+const diffInMs = Date.parse(data_Check_out) - Date.parse(data_check_in)
+const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+document.getElementById("total_days_label").innerHTML = diffInDays;
 
 let Adults = document.getElementById("Adults").value;
 let Childrens = document.getElementById("Childrens").value;
@@ -197,19 +198,26 @@ function numbs_of_room_fun(data_number_of_rooms) {
     }
 }
 
-// For Total Dates
-document.getElementById("Check_out").addEventListener("change", function () {
-    var data_check_in = document.getElementById("Check_in").value;
-    var data_Check_out = document.getElementById("Check_out").value;
-    console.log(data_check_in)
+// For Check In
+function checkin() {
+    let data_check_in = document.getElementById("Check_in").value;
+    let data_Check_out = document.getElementById("Check_out").value;
     const diffInMs = Date.parse(data_Check_out) - Date.parse(data_check_in)
     const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
     document.getElementById("total_days_label").innerHTML = diffInDays;
-})
+}
 
+// For Check In
+function checkout() {
+    let data_check_in = document.getElementById("Check_in").value;
+    let data_Check_out = document.getElementById("Check_out").value;
+    const diffInMs = Date.parse(data_Check_out) - Date.parse(data_check_in)
+    const diffInDays = diffInMs / (1000 * 60 * 60 * 24);
+    document.getElementById("total_days_label").innerHTML = diffInDays;
+}
 
-// For Adult
-document.getElementById("Adults").addEventListener("change", function () {
+// For Adults
+function adults() {
     let Adults = document.getElementById("Adults").value;
     let Childrens = document.getElementById("Childrens").value;
     if (Childrens === "") {
@@ -217,23 +225,22 @@ document.getElementById("Adults").addEventListener("change", function () {
     }
     let total_people = parseInt(Adults) + parseInt(Childrens)
     document.getElementById("total_people_label").innerHTML = total_people;
-})
+}
 
-// For Children
-document.getElementById("Childrens").addEventListener("change", function () {
+// For Childrens
+function childrens() {
     let Adults = document.getElementById("Adults").value;
     let Childrens = document.getElementById("Childrens").value;
-    if (Adults === "") {
-        Adults = 0
+    if (Childrens === "") {
+        Childrens = 0
     }
     let total_people = parseInt(Adults) + parseInt(Childrens)
     document.getElementById("total_people_label").innerHTML = total_people;
-})
+}
 
 // For Room Type
-document.getElementById("room_type").addEventListener("change", function () {
+function roomtype() {
     const data_room_type = document.getElementById("room_type").value;
-    const data_number_of_rooms = document.getElementById("number_of_rooms").value;
 
     if (data_room_type === "AC Room") {
         document.getElementById("price_per_room").innerHTML = 1500;
@@ -242,20 +249,13 @@ document.getElementById("room_type").addEventListener("change", function () {
     } else if (data_room_type === "Deluxe Room") {
         document.getElementById("price_per_room").innerHTML = 1800;
     }
+}
 
-    if (data_room_type === "AC Room") {
-        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1500;
-    } else if (data_room_type === "NON AC ROOM") {
-        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1700;
-    } else if (data_room_type === "Deluxe Room") {
-        document.getElementById("room_price").innerHTML = parseInt(data_number_of_rooms) * 1800;
-    }
-})
-
-document.getElementById("number_of_rooms").addEventListener("change", function () {
-    const data_room_type = document.getElementById("room_type").value;
-    const data_number_of_rooms = document.getElementById("number_of_rooms").value;
-    const data_total_days = document.getElementById("total_days_label").innerHTML;
+// For Number of Rooms
+function numberofrooms() {
+    let data_room_type = document.getElementById("room_type").value;
+    let data_number_of_rooms = document.getElementById("number_of_rooms").value;
+    let data_total_days = document.getElementById("total_days_label").innerHTML;
 
     if (data_room_type === "AC Room") {
         document.getElementById("room_price").innerHTML = parseInt(data_total_days) * parseInt(data_number_of_rooms) * 1500;
@@ -266,12 +266,14 @@ document.getElementById("number_of_rooms").addEventListener("change", function (
     } else if (data_room_type === "Deluxe Room") {
         document.getElementById("room_price").innerHTML = parseInt(data_total_days) * parseInt(data_number_of_rooms) * 1800;
         document.getElementById("tax_price").innerHTML = parseInt(data_number_of_rooms) * 250;
+    } else {
+        document.getElementById("room_price").innerHTML = null;
+        document.getElementById("tax_price").innerHTML = null;
     }
 
-
     // For calculating total price
-    const room_price = document.getElementById("room_price").innerHTML;
-    const tax_price = document.getElementById("tax_price").innerHTML;
-    const total_amount_price = parseInt(room_price) + parseInt(tax_price);
+    let room_price = document.getElementById("room_price").innerHTML;
+    let tax_price = document.getElementById("tax_price").innerHTML;
+    let total_amount_price = parseInt(room_price) + parseInt(tax_price);
     document.getElementById("total_amount_price").innerHTML = total_amount_price;
-});
+}

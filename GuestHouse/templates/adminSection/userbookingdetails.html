@@ -23,78 +23,112 @@
         <section class="d-flex mb-3">
             <div class="m-1">
                 <label for="user-id" class="form-label">Booking ID</label>
-                <input type="text" class="form-control" id="user-id" value="{{details.id}}" readonly>
+                <input type="text" class="form-control" id="user-id" value="{{details.id}}">
             </div>
             <div class="m-1">
                 <label for="user-username" class="form-label">SIC Number</label>
-                <input type="text" class="form-control" id="user-username" value="{{details.user_username}}" readonly>
+                <input type="text" class="form-control" id="user-username" value="{{details.user_username}}">
             </div>
         </section>
         <section class="d-flex mb-3">
             <div class="m-1">
                 <label for="user-name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="user-name" value="{{details.full_name}}" readonly>
+                <input type="text" class="form-control" id="user-name" value="{{details.full_name}}">
             </div>
             <div class="m-1">
                 <label for="user-email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="user-email" value="{{details.email}}" readonly>
+                <input type="text" class="form-control" id="user-email" value="{{details.email}}">
             </div>
             <div class="m-1">
                 <label for="user-phone-number" class="form-label">Phone Number</label>
-                <input type="text" class="form-control" id="user-phone-number" value="{{details.phone_number}}"
-                    readonly>
+                <input type="text" class="form-control" id="user-phone-number" value="{{details.phone_number}}">
             </div>
             <div class="m-1">
                 <label for="user-phone-number" class="form-label">Address</label>
-                <input type="text" class="form-control" id="user-phone-number" value="{{details.address}}" readonly>
+                <input type="text" class="form-control" id="user-phone-number" value="{{details.address}}">
             </div>
         </section>
         <section class="d-flex mb-3">
             <div class="m-1">
                 <label for="booked-on" class="form-label">Booked On</label>
-                <input type="text" class="form-control" id="booked-on" value="{{details.created_at}}" readonly>
+                <input type="text" class="form-control" id="booked-on" value="{{details.created_at}}">
             </div>
             <div class="m-1">
                 <label for="total-people" class="form-label">Total People</label>
-                <input type="text" class="form-control" id="total-people" value="{{details.total_peoples}}" readonly>
+                <input type="text" class="form-control" id="total-people" value="{{details.total_peoples}}">
             </div>
             <div class="m-1">
                 <label for="room-type" class="form-label">Room Type</label>
-                <input type="text" class="form-control" id="room-type" value="{{details.room_type}}" readonly>
+                <input type="text" class="form-control" id="room-type" value="{{details.room_type}}">
             </div>
             <div class="m-1">
                 <label for="total-rooms" class="form-label">Total Rooms</label>
-                <input type="text" class="form-control" id="total-rooms" value="{{details.total_rooms}}" readonly>
+                <input type="text" class="form-control" id="total-rooms" value="{{details.total_rooms}}">
             </div>
         </section>
         <section class="d-flex mb-3">
             <div class="m-1">
                 <label for="check-in" class="form-label">Check In</label>
-                <input type="text" class="form-control" id="check-in" value="{{details.check_in}}" readonly>
+                <input type="text" class="form-control" id="check-in" value="{{details.check_in}}">
             </div>
             <div class="m-1">
                 <label for="check-out" class="form-label">Check Out</label>
-                <input type="text" class="form-control" id="check-out" value="{{details.check_out}}" readonly>
+                <input type="text" class="form-control" id="check-out" value="{{details.check_out}}">
             </div>
             <div class="m-1">
                 <label for="total-days" class="form-label">Total Days</label>
-                <input type="text" class="form-control" id="total-days" value="{{details.total_days}}" readonly>
+                <input type="text" class="form-control" id="total-days" value="{{details.total_days}}">
             </div>
         </section>
         <section class="d-flex mb-3">
             <div class="m-1">
                 <label for="check-in" class="form-label">Total Cost</label>
-                <input type="text" class="form-control" id="check-in" value="{{details.total_amount}}" readonly>
+                <input type="text" class="form-control" id="check-in" value="{{details.total_amount}}">
+            </div>
+        </section>
+        <section class="d-flex  ">
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#data"
+                aria-expanded="false" aria-controls="data">
+                Check Out
+            </button>
+        </section>
+        <section>
+            <div class="collapse mt-3" id="data">
+                <div class="">
+                    <section>
+                        <section class="d-flex">
+                            <div class="m-1">
+                                <label for="check-in-2" class="form-label">Check In Date Time</label>
+                                <input type="datetime-local" class="form-control" id="check-in-2">
+                            </div>
+                            <div class="m-1">
+                                <label for="check-out-2" class="form-label">Check Out Date Time</label>
+                                <input type="datetime-local" class="form-control" id="check-out-2">
+                            </div>
+                            <div class="m-1">
+                                <label for="room_type" class="form-label">Mode Of Payment</label>
+                                <select id="room_type" class="form-select" name="room_type">
+                                    <option value="">Select Payment Type</option>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Debit Card">Debit Card</option>
+                                    <option value="Credit Card">Credit Card</option>
+                                    <option value="UPI">UPI</option>
+                                </select>
+                            </div>
+                        </section>
+                        <section>
+                            <button type="button" class="btn btn-primary mt-2" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                Preview
+                            </button>
+                        </section>
+                    </section>
+                </div>
             </div>
         </section>
     </div>
     <div class="second-div">
         <section>
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                Check Out
-            </button>
-
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                 aria-hidden="true">
@@ -104,110 +138,30 @@
                             <h5 class="modal-title" id="exampleModalLabel">Receipt</h5>
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
-                        <div class="modal-body">
-                            <section class="d-flex mb-3">
-                                <div class="m-1">
-                                    <label for="user-id" class="form-label">Booking ID</label>
-                                    <input type="text" class="form-control" id="user-id" value="{{details.id}}"
-                                        readonly>
-                                </div>
-                                <div class="m-1">
-                                    <label for="user-username" class="form-label">SIC Number</label>
-                                    <input type="text" class="form-control" id="user-username"
-                                        value="{{details.user_username}}" readonly>
-                                </div>
+                        <div class="model-body">
+                            <section id="receipt-section-header">
+                                <img src="https://silicon.ac.in/wp-content/themes/sit/assets/img/sit-logo.svg" alt="">
+                                <h6 class="mt-1">Silicon Guest House</h6>
                             </section>
-                            <section class="d-flex mb-3">
-                                <div class="m-1">
-                                    <label for="user-name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="user-name" value="{{details.full_name}}"
-                                        readonly>
+                            <section id="receipt-section-body">
+                                <div class="row">
+                                    <div class="col">Name : </div>
+                                    <div class="col"><label>Soumya Prakash Sahu</label></div>
+
+                                    <div class="col">Check-in : </div>
+                                    <div class="col"><label>12/25/2022 4:25 pm</label></div>
                                 </div>
-                                <div class="m-1">
-                                    <label for="user-email" class="form-label">Email</label>
-                                    <input type="text" class="form-control" id="user-email" value="{{details.email}}"
-                                        readonly>
-                                </div>
-                                <div class="m-1">
-                                    <label for="user-phone-number" class="form-label">Phone Number</label>
-                                    <input type="text" class="form-control" id="user-phone-number"
-                                        value="{{details.phone_number}}" readonly>
-                                </div>
-                                <div class="m-1">
-                                    <label for="user-phone-number" class="form-label">Address</label>
-                                    <input type="text" class="form-control" id="user-phone-number"
-                                        value="{{details.address}}" readonly>
-                                </div>
-                            </section>
-                            <section class="d-flex mb-3">
-                                <div class="m-1">
-                                    <label for="booked-on" class="form-label">Booked On</label>
-                                    <input type="datetime" class="form-control" id="booked-on"
-                                        value="{{details.created_at}}" readonly>
-                                </div>
-                                <div class="m-1">
-                                    <label for="total-people" class="form-label">Total People</label>
-                                    <input type="text" class="form-control" id="total-people"
-                                        value="{{details.total_peoples}}">
-                                </div>
-                                <div class="m-1">
-                                    <label for="room-type" class="form-label">Room Type</label>
-                                    <input type="text" class="form-control" id="room-type"
-                                        value="{{details.room_type}}">
-                                </div>
-                                <div class="m-1">
-                                    <label for="total-rooms" class="form-label">Total Rooms</label>
-                                    <input type="text" class="form-control" id="total-rooms"
-                                        value="{{details.total_rooms}}">
-                                </div>
-                            </section>
-                            <section class="d-flex mb-3">
-                                <div class="m-1">
-                                    <label for="check-in" class="form-label">Check In</label>
-                                    <input type="text" class="form-control" id="check-in" value="{{details.check_in}}">
-                                </div>
-                                <div class="m-1">
-                                    <label for="check-out" class="form-label">Check Out</label>
-                                    <input type="text" class="form-control" id="check-out"
-                                        value="{{details.check_out}}">
-                                </div>
-                                <div class="m-1">
-                                    <label for="total-days" class="form-label">Total Days</label>
-                                    <input type="text" class="form-control" id="total-days"
-                                        value="{{details.total_days}}">
-                                </div>
-                            </section>
-                            <section class="d-flex mb-3">
-                                <div class="m-1">
-                                    <label for="check-in" class="form-label">Total Cost</label>
-                                    <input type="text" class="form-control" id="check-in"
-                                        value="{{details.total_amount}}">
-                                </div>
-                            </section>
-                            <hr>
-                            <section class="d-flex">
-                                <div class="m-1">
-                                    <label for="check-in" class="form-label">Check In Date Time</label>
-                                    <input type="datetime-local" class="form-control" id="check-in">
-                                </div>
-                                <div class="m-1">
-                                    <label for="check-in" class="form-label">Check Out Date Time</label>
-                                    <input type="datetime-local" class="form-control" id="check-in">
-                                </div>
-                                <div class="m-1">
-                                    <label for="room_type" class="form-label">Mode Of Payment</label>
-                                    <select id="room_type" class="form-select" name="room_type">
-                                        <option value="">Select Payment Type</option>
-                                        <option value="AC Room">Cash</option>
-                                        <option value="NON AC ROOM">Debit Card</option>
-                                        <option value="Deluxe Room">Credit Card</option>
-                                        <option value="Deluxe Room">UPI</option>
-                                    </select>
+                                <div class="row">
+                                    <div class="col">Total Room : </div>
+                                    <div class="col"><label>2</label></div>
+                                    <div class="col">Check-out : </div>
+                                    <div class="col"><label>12/25/2022 4:25 pm</label></div>
                                 </div>
                             </section>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" id="btnPrint" class="btn btn-primary"><i class="fa-solid fa-print"></i> &nbsp;
+                            <button type="button" id="btnPrint" class="btn btn-primary"><i
+                                    class="fa-solid fa-print"></i> &nbsp;
                                 Print</button>
                             <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
                         </div>

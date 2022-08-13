@@ -22,12 +22,12 @@
                     <h4>STAYING DETAILS</h4>
                     <div class="col">
                         <label for="Check_in" class="form-label">Check-in</label>
-                        <input type="date" class="form-control" id="Check_in" name="Check_in">
+                        <input type="date" class="form-control" id="Check_in" name="Check_in" onchange="checkin()">
                         <span id="Check_in_error" class="error_message"></span>
                     </div>
                     <div class="col">
                         <label for="Check_out" class="form-label">Check-out</label>
-                        <input type="date" class="form-control" id="Check_out" name="Check_out">
+                        <input type="date" class="form-control" id="Check_out" name="Check_out" onchange="checkout()">
                         <span id="Check_out_error" class="error_message"></span>
                     </div>
                 </div>
@@ -35,12 +35,12 @@
                 <div class="row mb-5">
                     <div class="col">
                         <label for="Adults" class="form-label">Adults</label>
-                        <input type="number" class="form-control" id="Adults" name="Adults">
+                        <input type="number" class="form-control" id="Adults" name="Adults" onchange="adults()">
                         <span id="Adults_error" class="error_message"></span>
                     </div>
                     <div class="col">
                         <label for="Childrens" class="form-label">Childrens</label>
-                        <input type="number" class="form-control" id="Childrens" name="Childrens">
+                        <input type="number" class="form-control" id="Childrens" name="Childrens" onchange="childrens()">
                         <span id="Childrens_error" class="error_message"></span>
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                     <h4 class="headline">ROOM DETAILS</h4>
                     <div class="col">
                         <label for="room_type" class="form-label">Room Type</label>
-                        <select id="room_type" class="form-select" name="room_type">
+                        <select id="room_type" class="form-select" name="room_type" onchange="roomtype()">
                             <option value="">Select Room Type</option>
                             <option value="AC Room">AC Room</option>
                             <option value="NON AC ROOM">NON AC Room</option>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="col">
                         <label for="number_of_rooms" class="form-label">Number of Rooms</label>
-                        <input type="number" class="form-control" id="number_of_rooms" name="number_of_rooms">
+                        <input type="number" class="form-control" id="number_of_rooms" name="number_of_rooms" onchange="numberofrooms()">
                         <span id="number_of_rooms_error" class="error_message"></span>
                     </div>
                 </div>
@@ -99,29 +99,29 @@
                         <hr>
                         <section>
                             <p>Total Days</p>
-                            <label id="total_days_label">0 days</label>
+                            <label id="total_days_label">NaN</label>
                         </section>
                         <section>
                             <p>Total Peoples</p>
-                            <label id="total_people_label">0</label>
+                            <label id="total_people_label">NaN</label>
                         </section>
                         <hr>
                         <section>
                             <p>Price Per Room</p>
-                            <label id="price_per_room">0</label>
+                            <label id="price_per_room">NaN</label>
                         </section>
                         <section>
                             <p>Total Room Price</p>
-                            <label id="room_price">0 /-</label>
+                            <label id="room_price">NaN</label>
                         </section>
                         <section>
                             <p>Tax & Service Fee</p>
-                            <label id="tax_price">0 /-</label>
+                            <label id="tax_price">NaN</label>
                         </section>
                         <hr>
                         <section>
                             <p>Total amount to be paid</p>
-                            <label id="total_amount_price">0 /-</label>
+                            <label id="total_amount_price">NaN</label>
                         </section>
                         <hr>
                         <div class="d-flex justify-content-end">

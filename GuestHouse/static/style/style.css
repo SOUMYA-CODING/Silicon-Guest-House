@@ -664,35 +664,38 @@ html {
     overflow: auto;
 }
 
-.booking-page .first-div .form-control {
+.booking-page .first-div .form-control,
+.booking-page .first-div .form-select {
     width: 300px;
     border-radius: 0;
     background-color: #fff;
-    cursor: pointer;
 }
 
-.booking-page .first-div .form-control:focus {
+.booking-page .first-div .form-control:focus,
+.booking-page .first-div .form-select:focus {
     box-shadow: 0px 0px 8px 0px royalblue;
 }
 
-.booking-page .first-div .form-control:hover {
+.booking-page .first-div .form-control:hover,
+.booking-page .first-div .form-select:hover {
     box-shadow: 0px 0px 8px 0px royalblue;
 }
 
-
-.booking-page .second-div .form-control,
-.booking-page .second-div .form-select {
+/* ----- Recipt ----- */
+.booking-page .second-div #receipt-section-header {
     width: 100%;
-    border-radius: 0;
-    background-color: #fff;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
 }
 
-.booking-page .second-div .form-control:focus,
-.booking-page .second-div .form-select:focus {
-    box-shadow: 0px 0px 8px 0px royalblue;
-}
-
-.booking-page .second-div .form-control:hover,
-.booking-page .second-div .form-select:hover {
-    box-shadow: 0px 0px 8px 0px royalblue;
+.booking-page .second-div #receipt-section-body {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem;
 }
