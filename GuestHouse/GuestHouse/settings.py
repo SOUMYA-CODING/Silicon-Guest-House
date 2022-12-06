@@ -82,8 +82,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'silicon_guest_house_db',
-        'USER': 'root',
-        'PASSWORD': '1992',
+        'USER': 'soumyanatsu',
+        'PASSWORD': 'Soumya@1992',
         'HOST': '127.0.0.1',
         'PORT': '3306',
     }
